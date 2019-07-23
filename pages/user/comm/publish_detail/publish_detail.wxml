@@ -1,0 +1,61 @@
+<view class='container'>
+
+  <!-- 代课老师 -->
+    <view class='job_title'>
+        <text class='job_title_name'>数学代课老师</text>
+        <view class='job_title_txt' bindtap="goCompiling">考编信息</view>
+    </view>
+
+  <!-- 地区、时间、学历 -->
+    <view class='job_three'>
+        <view class='job_three'>
+            <image src="/images/1teacher/h_icon7@2x.png"></image>
+            <text class='job_three_txt'>江干区</text>
+        </view>
+        <view class='job_three'>
+            <image src="/images/1teacher/h_icon2@2x.png"></image>
+            <text class='job_three_txt'>1 - 3年</text>
+        </view>
+         <view class='job_three'>
+            <image src="/images/1teacher/h_icon3@2x.png"></image>
+            <text class='job_three_txt'>本科</text>
+        </view>
+    </view>
+
+  
+  <!-- 下划线 -->
+  <view class='job_underline'></view>    
+
+    <view class='job_described'>
+        <image src="/images/1teacher/h_icon5@2x.png"></image>
+        <text class='job_described_txt'>职位描述</text>
+    </view>
+
+  <!-- 岗位职责 -->
+  <view class='duty'>
+      <text class='duty_title'>岗位职责：</text>
+      <view class='duty_content'> 
+          <view class='duty_content_list'>1、为学生提供专业的高质量教学服务，组织好课堂教学；</view>
+          <view class='duty_content_list'>2、帮助学生提高学习兴趣，养成好的学习方法和习惯；</view>
+          <view class='duty_content_list'>3、与学生及家长保持良好沟通，阶段性反馈学生学习情况；</view>
+      </view>
+  </view>
+
+<!-- 岗位要求 -->
+  <view class='duty'>
+      <text class='duty_title'>岗位职责：</text>
+      <view class='duty_content'> 
+          <view class='duty_content_list'>1、本科及以上学历，数学专业或者理工科专业，1年以上教育工作经验，普通话标准，仪表仪态端正，有亲和力。</view>
+          <view class='duty_content_list'>2、优秀且学历能力强者可以不要求工作经验；</view>
+          <view class='duty_content_list'>3、具有良好的教师职业操守和服务意识，热爱教育教学工作，热爱学生，为人师表；</view>
+          <view class='duty_content_list'>4、具备一定的信息素养和教学设计能力，学历能力强，能秉持“以学生为中心”的教学理念组织教学活动；</view>
+      </view>
+  </view>
+
+  <!-- 发送简历按钮 -->
+  <view class='btn'>
+     <button>
+       发送简历
+     </button>
+  </view>
+</view>

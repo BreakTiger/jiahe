@@ -1,0 +1,77 @@
+<view class='mt-outer'>
+  <view class='mt-item' >
+    <view class='wh100 mt-box'>
+      <view class='mt-lf'>
+        <view>
+          <image mode='widthFix' class='img-w' src='{{imgUrl}}{{detail.url}}'></image>
+        </view>
+      </view>
+      <view class='mt-rt flexa'>
+        <view>
+          <view class='flex mt-rt-box flexba'>
+            <view class='flexba'>
+              <view>
+                <text class='f30  acl3' style='font-weight:bold'>{{detail.school}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 职位描述 -->
+<view class='dc-content'>
+  <view class='dc-title flexa'>
+    <view class='mr20'>
+      <image class='image-full' src='../../../../imgs/index/dsc.png'></image>
+    </view>
+    <text class='f30'>相关信息</text>
+  </view>
+  <view class='dc-mess'>
+    <view class='mess-content'>
+      <view class='content-hang f30 clear '>
+        <text class='acl6'>负责人</text>
+        <view>
+          <text>{{detail.name}}</text>
+        </view>
+      </view>
+      <view class='content-hang f30 clear '>
+        <text class='acl6'>学校名称</text>
+        <view>
+          <text>{{detail.school}}</text>
+        </view>
+      </view>
+      <view class='content-hang f30 clear'>
+        <text class='acl6'>成立时间</text>
+        <view>
+          <text>{{detail.beginday}}</text>
+        </view>
+      </view>
+      <view class='content-hang f30 clear '>
+        <text class='acl6'>经营范围</text>
+        <view>
+          <text>{{detail.range}}</text>
+        </view>
+      </view>
+      <view class='content-hang f30 clear '>
+        <text class='acl6'>经营区域</text>
+        <view>
+          <text>{{detail.area}}</text>
+        </view>
+      </view>
+      <view class='content-hang f30 clear '>
+        <text class='acl6'>学校介绍</text>
+        <view>
+          <text>{{detail.introduce}}</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+<view class='bf000 flexca'>
+  <view class='bf-btn flexca f30' data-daphone='{{detail.phone}}' bindtap='daTel'>
+    <text>电话联系</text>
+  </view>
+</view>

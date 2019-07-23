@@ -1,0 +1,64 @@
+<view class='cr-container'>
+
+<!-- 没有充值的情况 -------------------------- -->
+  <view class='pubish_img'  wx:if="{{publist.code == 402002}}">
+      <image src="/images/5user/p_default@2x.png" style="width:100%; height: 650rpx;"></image>
+      <view class='pu-tx'>暂无发布内容哦</view>
+  </view>  
+    <view class='pubish_img'  wx:if="{{publist.code == 503008}}">
+      <image src="/images/5user/p_default@2x.png" style="width:100%; height: 650rpx;"></image>
+      <view class='pu-tx'>暂无发布内容哦</view>
+  </view>  
+ <!-- 充值的情况 ---------------------------- -->
+ <view wx:if="{{publist.code == 200}}" wx:for="{{room}}"  wx:key="unique">
+       <!-- <view class='publish_close' data-id="{{item}}" bindtap="goAlert" wx:if="{{item.status == 1}}">切换状态</view>  -->
+    <view  wx:if="{{item.status != 3 }}">
+      <view class='publish_close' data-id="{{item}}" bindtap="goAlert">切换状态</view> 
+      <view bindtap="goClassroom_detail" data-id="{{item}}">
+          <view class='pubish_title'>   
+                <view class='pubish_title_t'>{{item.itemname || item.roomname}}</view>
+                <view class='pubish_title_release' wx:if="{{item.status == 1}}" >[ 已发布 ]</view>
+                 <view class='pubish_title_close'  wx:if="{{item.status == 2}}">[ 已出租 ]</view> 
+          </view>
+          <view class='pubish_title_p'>
+              <view class='pubish_border'>{{item.roomlabel}}</view>
+
+          </view>
+      </view>
+    </view>
+
+</view>
+
+<!-- 底部按钮 -->
+    <view class='bf000 flexca' wx:if="{{publist.code == 503008}}">
+      <view class='bf-btn flexca f30' bindtap='pubfaInto'>
+        <text>发布共享教室</text>
+      </view>
+    </view>
+
+  <view class='bf000 flexca'  wx:if="{{publist.code == 402002}}">
+      <view class='bf-btn flexca f30' bindtap='pubfaInto'>
+        <text>发布共享教室</text>
+      </view>
+    </view>
+
+    <view class='bf000 flexca' wx:if="{{publist.code == 200}}">
+      <view class='bf-btn flexca f30' bindtap='addRoom'>
+        <text>发布共享教室</text>
+      </view>
+    </view>
+
+
+
+</view>
+
+<view style="width: 100%;height: 200rpx;">
+
+</view>
+<!-- 弹框 -->
+ <view class='bg' wx:if="{{alert==1}}"> 
+<!-- <view class='bg'>  -->
+    <view class='bg-alert'>
+        <view  wx:for="{{alertLlist}}" wx:key="unique" data-index='{{index}}' class="{{selected==index?'show-alert':'hidden-alert'}}" bindtap='selected'>{{item}}</view>
+    </view> 
+</view>

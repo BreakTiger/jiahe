@@ -1,0 +1,71 @@
+page{
+  background-color: #fff;
+}
+.detail-content{
+  background-color: #f7f7f7;
+}
+/* 全部职位 */
+ .ma-item{
+   width: 100%;
+   background-color: #fff;
+   padding: 20rpx 24rpx;
+ }
+.ma-item .h-ling{
+   height: 28rpx;
+   border-left: 1rpx solid #999;
+   margin: 0 20rpx;
+ }
+.ma-item .mi-bottom{
+  width: 100%;
+  height: 160rpx;
+  padding-left: 160rpx;
+  padding-right: 100rpx;
+  position: relative;
+ }
+ .mi-bottom>view:first-child{
+   width: 160rpx;
+   height: 160rpx;
+   position: absolute;
+   left: 0;
+   top: 0;
+   border-radius: 15rpx;
+ }
+  .mi-bottom>view:last-child{
+   width: 80rpx;
+   height: 160rpx;
+   position: absolute;
+   right: 0;
+   top: 0;
+ }
+   .mi-bottom>view:last-child view{
+   width: 80rpx;
+   height: 80rpx;
+ }
+ .img-lf{
+   width: 50rpx;
+   height: 50rpx;
+ }
+ /* 职位描述 */
+ .dc-content{
+   background-color: #fff;
+ }
+.dc-title{
+  padding: 15rpx 24rpx;
+  border-bottom: 1rpx solid #FAFBFC;
+}
+.dc-title>view{
+   width: 42rpx;
+   height: 50rpx;
+}
+.dc-text{
+  padding: 20rpx 24rpx;
+}
+/* 底部按钮 */
+.bf-btn{
+  width: 500rpx;
+  height: 80rpx;
+  background-color: #14a1fd;
+  color: #fff;
+  border-radius: 41rpx;
+  box-shadow: 0 3rpx 1rpx 2rpx rgba(20,161,253,0.2);
+}

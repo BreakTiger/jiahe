@@ -1,0 +1,41 @@
+/* 轮播图图片 */
+.banner_img image{
+  width: 100%;
+  height: 320rpx;
+}
+
+/* 轮播标题 */
+.bannerDetail_title{
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #333333;
+  font-weight:bold;
+}
+
+/* 下划线 */
+.bannerDetail_underline{
+  margin-top: 20rpx;
+  border: 4rpx solid #444444;
+  width: 40rpx;
+  height: 2rpx;
+  margin:20rpx auto;
+  border-radius: 2rpx;
+}
+
+/* 轮播图片内容 */
+.bannerDetail_list{
+  width: 702rpx;
+  color: #666666;
+  font-size: 28rpx;
+  margin-left: 30rpx;
+}
+.bannerDetail_img{
+  width: 702rpx;
+  height: 480rpx;
+  margin: 40rpx auto;
+}
+.bannerDetail_img image{
+  width: 100%;
+  height:100%;
+}

@@ -1,0 +1,147 @@
+
+@import 'vip.wxss';
+page{
+  background-color: #fff;
+}
+.inputs-box .inputext{
+    /* font-size:26rpx; */
+    overflow: visible;
+}
+.only-text{
+  font-size: 30rpx;
+}
+.input-person{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.bt-fixed{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* height: 200rpx; */
+}
+.content-list{
+  padding: 20rpx 24rpx;
+}
+/* 1.3列表 */
+.top-list{
+  padding-top: 30rpx;
+  /* padding: 30rpx 24rpx 20rpx; */
+  background-color: #fff;
+}
+.top-list .detail-color-item{
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+  color: #B0B0B0;
+  border-radius: 8rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  border: 1px solid #B0B0B0;
+}
+.top-list .active{
+  background-color: rgba(225,243,255,1);
+  color: #333;
+  border: 1px solid rgba(225,243,255,1);
+}
+.top-list .detail-color .clactive{
+  color: #fff;
+  background-color: #839aaf;
+}
+.list-title{
+  margin-bottom: 40rpx;
+  
+}
+/* 上传图片 */
+.up-pic{
+  padding:20rpx 24rpx;
+}
+.pic-box{
+  margin-top: 20rpx;
+}
+.ap-box{
+   position: relative;
+}
+.add-pic{
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 20rpx;
+  position: relative;
+}
+/* 删除图片 */
+.img-de{
+  width: 45rpx;
+  height: 45rpx;
+  border-radius: 50%;
+  position: absolute;
+  right: 15rpx;
+  top: 15rpx;
+}
+.hong-contant .teamwork-btn{
+  width: 360rpx;
+  height: 88rpx;
+  border-radius: 50rpx;
+  color: white;
+  background-color:#14a1fd;
+  margin: 0 auto;
+  margin-top: 80rpx;
+  margin-bottom: 40rpx;
+  
+}
+.section {
+  height: auto;
+  width: 100%;
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-between;
+  font-size: 32rpx;
+  color: #333;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+input {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.section_gap {
+  font-size: 28rpx;
+  color:#aaa;
+}
+
+label{
+  border:2rpx solid #aaaaaa;
+  font-size:28rpx;
+  color:#999;
+}
+.check {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+ 
+}
+.check label {
+  width: 120rpx;
+  height: 60rpx;
+  border-radius: 8rpx;
+  /* background-color: #fff;   */
+  display: flex;
+  align-items: center;
+  margin: 0 50rpx;
+  justify-content: center;
+  /* color: #aaa; */
+  margin-top: 20rpx;
+}
+.is_checked {
+   background-color: #14a1fd;
+   opacity: 0.4;
+   color: #fff;
+   border: 2rpx solid #fff;
+}
+.is_checked>checkbox {
+  color: red;
+}

@@ -1,0 +1,41 @@
+<view>
+
+  <!-- 排序关键词 -->
+  <view class='focus-home'>
+    <!-- 1搜索 -->
+    <view class='header-box flexba'>
+      <!-- 收索框 -->
+      <view class="header">
+        <input maxlength="50" class="search" value='{{detailDatas.num}}' bindinput="bindseInput" placeholder='找修车、保养' placeholder-style="color:#C1C1C1;font-size:26rpx;"></input>
+        <icon type="search" size="15" color="#BFBFBF" />
+      </view>
+      <view class='header-title' data-search='1' bindtap='reData'>搜索</view>
+    </view>
+  </view>
+  <!-- 商品内容  -->
+  <view class='among-content'>
+        <block wx:key="shoplist" wx:for="{{shoplist}}" wx:for-index="index">
+          <view class="shop-box" data-id='{{item.id}}' data-item='{{item}}' bindtap='detailInto'>
+            <view class="shop-img">
+              <image  mode="widthFix" src="{{hpUrl}}Uploads/{{item.url}}"></image>
+            </view>
+            <view class="shop-detail">
+              <view class="shop-name">
+                <text>{{item.goodsname}}</text>
+              </view>
+              <view class="shop-price">
+                <!-- {{item.store}}下cid{{item.cid}} -->
+                <text>￥{{item.price}}</text>
+              </view>
+              <view class='shop-number'>
+                <text>销量：{{item.number}}</text>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+</view>
+<!-- &&底部加载 -->
+<view class='page-add-data flexca'>
+  <text>{{pageTottomText}}</text>
+</view>

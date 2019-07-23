@@ -1,0 +1,54 @@
+<view class='publish-container'>
+  <!-- 没有充值的情况----------------------------------- -->
+          <!-- //会员已过期 -->
+   <view class='pubish_img' wx:if="{{publist.code == 402002}}">
+      <image class='publist' src="/images/5user/p_default@2x.png"></image>
+      <view class='pubish_text'>暂无发布内容哦~</view> 
+    </view>   
+          <!-- //未开通会员 -->
+  <view class='pubish_img' wx:if="{{publist.code == 503008}}">
+      <image class='publist' src="/images/5user/p_default@2x.png"></image>
+      <view class='pubish_text'>暂无发布内容哦~</view> 
+    </view>   
+    
+
+  <!-- 充值的情况 ----------------------------------- -->
+  <view  wx:if="{{publist.code == 200}}">
+    <view wx:for="{{interCoo}}" wx:key="unique" wx:if="{{item.status == 1}}">
+        <view class='publish_close' bindtap="close" data-id="{{item}}" wx:if="{{item.status == 1}}">关闭项目</view>
+            <view bindtap="goTogether_detail" data-id="{{item}}">
+                  <view class='pubish_title'>
+                        <view class='pubish_title_t'>{{item.itemname}}</view>
+                        <view class='pubish_title_release' wx:if="{{item.status == 1}}">[ 已发布 ]</view>
+                        <view class='pubish_title_true' wx:if="{{item.status == 2}}">[ 已关闭 ]</view>
+                  </view>
+                  <view class='pubish_title_p'>
+                        <view class='pubish_title_one'>项目类型</view>
+                        <view class='pubish_title_b'></view>
+                        <view class='pubish_title_two' wx:if="{{item.itemtype == 1}}">整合上市</view>
+                        <view class='pubish_title_two' wx:if="{{item.itemtype == 2}}">异业合作</view>
+                  </view>
+            </view>
+      </view>
+    </view>
+</view>
+
+<view style="width:100%;height:200rpx;"></view>
+<!-- 底部按钮 -->
+<view class='bf000 flexca'wx:if="{{publist.code == 503008}}">
+  <view class='bf-btn flexca f30' bindtap='pubfaInto'>
+    <text>发布合作项目</text>
+  </view>
+</view>
+
+<view class='bf000 flexca' wx:if="{{publist.code == 402002}}">
+  <view class='bf-btn flexca f30' bindtap='pubfaInto'>
+    <text>发布合作项目</text>
+  </view>
+</view>
+
+<view class='bf000 flexca' wx:if="{{publist.code == 200}}">
+  <view class='bf-btn flexca f30' bindtap='newCooperation'>
+    <text>发布合作项目</text>
+  </view>
+</view>

@@ -1,0 +1,41 @@
+<view class='rent-container'>
+  <view class='rent-list'>
+    <block wx:key="schools" wx:for="{{schools}}">
+      <view class='rent-item'>
+        <view class='item-top flexb'>
+          <view>
+            <view class='f30'>
+              <text>订单编号：{{item.ordernumber}}</text>
+            </view>
+            <view class='f24  mt20'>
+              <text class='acl9'>支付时间：{{item.daytime}}</text>
+            </view>
+          </view>
+          <view class='f24 bcl'>已支付</view>
+        </view>
+        <view class='item-content'>
+          <view class='content-all flex mi-bottom'>
+            <view class='all-img'>
+              <image mode='widthFix' class='img-w' src='{{imgUrl}}{{item.classurl}}'></image>
+            </view>
+            <view class='all-text'>
+              <view class='text-box'>
+                <view class='d000' style='height:100rpx;padding-top:20rpx;'>
+                  <text class='tp f30 acl3'>{{item.name}}</text>
+                </view>
+                <view class='bt acl f24'>
+                  <text class='f28'>￥{{item.price}}</text>/{{item.month}}</view>
+              </view>
+            </view>
+             <view class='flexca' data-daphone='{{item.phone}}' bindtap='daTel'>
+              <view >
+                <image mode='widthFix' class='img-w' src='../../../../imgs/index/phone.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+
+  </view>
+</view>

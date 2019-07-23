@@ -1,0 +1,73 @@
+/* 表单 */
+.inputs-box{
+  border-bottom: 4rpx solid #f7f7f7;
+}
+.inputs-box .inputext{
+    overflow: visible;
+}
+.only-text{
+  font-size: 30rpx;
+}
+.input-person{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.bt-fixed{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* height: 200rpx; */
+}
+/*职位名称*/
+.inputs-box{
+  height:88rpx;
+  padding:0 24rpx;
+  border-bottom:1px solid #F7F7F7;
+  background-color:#ffffff;
+  font-size:30rpx;
+  color:#333333;
+}
+.inputsty{
+  color: #999999;
+  font-size: 30rpx;
+}
+.inputs-box input{
+  font-size:26rpx;
+  width:480rpx;
+  text-align:right;
+}
+.flexa-img{
+  width:16rpx;
+  height:20rpx;
+  margin-left:15rpx;
+  position:relative;
+  top:3rpx;
+}
+.content-textrea .item-box {
+  width:100%;
+  padding:20rpx 24rpx;
+  height:200rpx;
+}
+.content-textrea .item-box textarea {
+  background-color:#f7f7f7;
+  width:100%;
+  height:100%;
+  padding:20rpx;
+  box-sizing:border-box;
+  font-size:28rpx;
+  margin-bottom:35rpx;
+}
+.bf-btn{
+  width:400rpx;
+  height:80rpx;
+  background-color:#14a1fd;
+  color:#fff;
+  border-radius:41rpx;
+  box-shadow:0 3rpx 1rpx 2rpx rgba(20,161,253,0.2);
+  text-align:center;
+  line-height:80rpx;
+  margin-top:50rpx;
+}

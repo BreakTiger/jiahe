@@ -1,0 +1,83 @@
+<view class="edition-container">
+  <view class='edition-content'>
+    <!-- 1分类菜单-->
+    <view class='edition-menu flex'>
+      <block wx:key="edmenu" wx:for="{{edmenu}}" wx:for-index="index">
+        <view class='flexcca' data-index='{{index}}' bindtap='keyMenu'>
+          <text class="menu-title {{edmenuShow==index?'actitle':''}}">{{item.menunm}}</text>
+          <view class="menu-under {{edmenuShow==index?'edactive':''}}"></view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 登录 -->
+  <view wx:if="{{edmenuShow==0?'true':''}}" class="usermotto">
+    <form bindsubmit="formLogin">
+      <view class='username-box'>
+        <view class='username flexa'>
+          <image src='../../imgs/user/login_1.png'></image>
+          <input maxlength='11' name='phone' placeholder='请输入手机号' type="text" bindinput='loginPhone' />
+        </view>
+        <view class='username flexa'>
+          <image src='../../imgs/user/login_2.png'></image>
+          <!-- -->
+          <input maxlength='25' name='pwd' placeholder='请输入密码' type="text" bindinput="loginPassword" password="true" />
+        </view>
+        <view class='usertext flexb' >
+          <text bindtap='backHome'>返回首页</text>
+          <text bindtap='forgetInto'>忘记密码</text>
+        </view>
+      </view>
+      <button class='r-l-btn' formType="submit">登录</button>
+    </form>
+
+  </view>
+  <!-- 注册 -->
+  <view wx:if="{{edmenuShow==1?'true':''}}" class="usermotto">
+    <form bindsubmit="formLover">
+      <view class='username-box'>
+      <!-- 注册姓名 -->
+        <view class='username flexa'>
+          <image src='../../imgs/user/login_1.png'></image>
+          <input maxlength='11' name='hphone' placeholder='请输入手机号' type="text" bindinput='lovePhone' />
+        </view>
+      <!-- 注册验证码 -->
+         <view class='username flexa'>
+          <image src='../../imgs/user/login_3.png'></image>
+          <input maxlength='4' name='hchange' placeholder='请输入验证码' type="text" bindinput="yanLoveInput" />
+          <view class='get-pwd'>
+            <view bindtap='yanLoveBtn' class="pwd-text-box flexca  {{loveChange?'':'active'}}">
+              <text>{{getText2}}</text>
+            </view>
+          </view>
+        </view> 
+        <view class='username flexa'>
+          <image src='../../imgs/user/login_2.png'></image>
+          <input maxlength='25' name='hpwd' placeholder='请设置密码' type="text" bindinput="lovePassword" password="true" />
+        </view>
+        <view class='userperson'>
+          <view class='f30 flexca'>请选择您的注册身份</view>
+
+          
+          <view class='select-only f30'>
+            <view class='flexa1 '>
+              <view class="so-3 flexca {{selectIndex==1?'active1':''}}" data-selectIndex='1' bindtap='selectFn'>
+                <view class="so-2 {{selectIndex==1?'active2':''}}"></view>
+              </view>
+              <text>教师(我要求职)</text>
+            </view>
+            <view class='flexa1'>
+              <view class="so-3 flexca {{selectIndex==2?'active1':''}}" data-selectIndex='2' bindtap='selectFn'>
+                <view class="so-2 {{selectIndex==2?'active2':''}}"></view>
+              </view>
+              <text> 校长(我要招聘等)</text>
+            </view>
+
+          </view>
+        </view>
+      </view>
+      <button class='flexca' formType="submit">注册</button>
+    </form>
+  </view>
+</view>

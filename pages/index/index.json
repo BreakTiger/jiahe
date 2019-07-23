@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "全国共享好师信息库",
+  "onReachBottomDistance": "50",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#14a1fd"
+}

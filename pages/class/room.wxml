@@ -1,0 +1,53 @@
+<view class='room-container'>
+  <!-- 顶部区域筛选 -->
+  <view class='share-city flexa' bindtap="translate">
+    <view class='flexa f30 bcl'>
+      <view class='city-img'>
+        <image class='image-full' src='/images/2classroom/ads2@2x.png'></image>
+      </view>
+      <!-- 区域筛选： -->
+         <view class="section">
+          <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <view class="picker" style='color: #fff;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;'>
+              {{region[0]}}
+            </view>
+          </picker>
+        </view>
+    </view>
+  </view>
+
+  <!-- 教室列表 -->
+  <view class='area-geo' wx:if="{{room  == ''}}" >该地区暂无~</view> 
+  <view class='among-content'>
+    <block>
+      <view class="shop-box" wx:for="{{room}}" data-id='{{item}}' wx:key="unique" bindtap="goRoom">
+        <view class='room_border' wx:if="{{item.status == '2'}}">已出租</view>
+
+        <view class="shop-img">
+          <view class='op-img'>
+                <image  src='{{item.sliderimage[0]}}'></image>
+          </view>
+        </view>
+        <view class="shop-detail">
+          <view class="shop-name">
+            <text>{{item.address}}</text>
+          </view>
+          <view class="shop-have f28">
+            <view>{{item.roomlabel}}</view>
+            <!-- <view>{{item.roomlabel[1]}}</view> -->
+          </view>
+          <view class="shop-price">
+            <!-- <view>￥<text>{{item.price}}/{{item.month}}</text></view> -->
+            <view class='shop-border'></view>
+            <view class='shop-price_text'>{{item.show_address}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!-- &&底部加载 -->
+  <view class='page-add-data flexca' wx:if="{{room != ''}}">
+      <text>{{pageTottomText}}</text>
+  </view>

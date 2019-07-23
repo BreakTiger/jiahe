@@ -1,0 +1,108 @@
+{
+  "pages": [
+      "pages/index/index",
+      "pages/school/share",
+      "pages/class/room",
+      "pages/class/room/detail",
+      "pages/class/room/goRoom/goRoom",
+      "pages/teamwork/teamwork",
+      "pages/teamwork/team/detail0",
+      "pages/teamwork/team/detail1",
+      "pages/teamwork/teamwork_intent/teamwork_intent",
+      "pages/teamwork/school_cooperation/school_cooperation",
+      "pages/detail/detail0",
+      "pages/index/banner_detail/banner_detail",
+      "pages/index-detail/index-detail",
+      "pages/index/communication/communication",
+      "pages/index/teacher_detail/teacher_detail",
+      "pages/index/teach_job/teach_job",
+      "pages/index/goCompiling/goCompiling",
+      "pages/index/examination/examination",
+      "pages/detail/detail1",
+      "pages/zhuche/zhuche",
+      "pages/zhuche/forget/forget",
+      "pages/zhuche/forget/back",
+      "pages/classify/classify",
+      "pages/user/comm/payment",
+      "pages/user/comm/publish_detail/publish_detail",
+      "pages/user/comm/classroom_detail/classroom_detail",
+      "pages/user/comm/school_detail/school_detail",
+      "pages/user/comm/together/together",
+      "pages/user/comm/enterprise_detail/enterprise_detail",
+      "pages/user/comm/delivery/delivery",
+      "pages/user/head/master",
+      "pages/user/head/pubfa",
+      "pages/user/head/pub/pubdt",
+      "pages/user/head/send",
+      "pages/user/head/send/shend",
+      "pages/user/head/room/into",
+      "pages/user/head/classroom",
+      "pages/user/head/room",
+      "pages/user/head/person",
+      "pages/user/head/school",
+      "pages/user/head/school/share",
+      "pages/user/head/contact",
+      "pages/user/head/news",
+      "pages/user/head/contact/de0",
+      "pages/user/head/contact/de1",
+      "pages/user/head/contact/de1a",
+      "pages/user/teach/person",
+      "pages/user/teach/jian",
+      "pages/user/teach/jian/jian",
+      "pages/user/teach/rent",
+      "pages/user/pu/person",
+      "pages/user/index",
+        "pages/user/head/publish",
+   
+        "pages/index/teach_job/modifyJob/job",
+      "pages/user/allSchool/newJob/newJob",
+      "pages/user/allSchool/newRoom/newRoom",
+      "pages/user/allSchool/newTeach/newTeach",
+      "pages/user/allSchool/newCooperation/newCooperation",
+        "pages/user/head/modifyJob",
+        "pages/class/room/goRoom/room",
+        "pages/class/room/goRoom/roomDetele/roomDetele"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#14a1fd",
+    "navigationBarTitleText": "帮校长",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#B0B0B0",
+    "selectedColor": "#14A1FD",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "共享教师",
+        "iconPath": "images/tab/tab_n_1.png",
+        "selectedIconPath": "imgs/index/tab_s_1.png"
+      },
+      {
+        "pagePath": "pages/class/room",
+        "text": "共享教室",
+        "iconPath": "images/tab/tab_n_2.png",
+        "selectedIconPath": "images/tab/tab_s_2.png"
+      },
+      {
+        "pagePath": "pages/school/share",
+        "text": "共享办学",
+        "iconPath": "images/tab/tab_n_3.png",
+        "selectedIconPath": "images/tab/tab_s_3.png"
+      },
+      {
+        "pagePath": "pages/teamwork/teamwork",
+        "text": "校际合作",
+        "iconPath": "images/tab/tab_n_4.png",
+        "selectedIconPath": "images/tab/tab_s_4.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "images/tab/tab_n_5.png",
+        "selectedIconPath": "images/tab/tab_s_5.png"
+      }
+    ]
+  }
+}

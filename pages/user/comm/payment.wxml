@@ -1,0 +1,43 @@
+<view class='payment_container'>
+    <!-- 需支付 -->
+    <view class='pay_txt'> 需支付 :</view>
+
+    <!-- 金额 -->
+    <!-- <view class='pay_price'>{{payList[0].money}}元<text>*(3个月)</text></view>
+     <view class='pay_price'>{{payList[1].money}}元<text>*(6个月)</text></view> -->
+
+        <view class='select-only f30'>
+            <!-- <view class='flexa1'>
+              <view class="so-3 flexca {{selectIndex==index?'active1':''}}" data-selectIndex='{{index}}' bindtap='selectFn' data-money="{{item}}">
+                <view class="so-2 {{selectIndex==index?'active2':''}}"></view>
+              </view>
+              <view class='pay_price' data-index="{{index}}">{{payList.money}}元 <text>*{{payList.month}}个月</text></view>
+            </view> -->
+            <view class='flexa1' wx:for="{{payList}}" wx:key="payList">
+              <view class="so-3 flexca {{selectIndex==index?'active1':''}}" data-selectIndex='{{index}}' bindtap='selectFn' data-money="{{item}}">
+                <view class="so-2 {{selectIndex==index?'active2':''}}"></view>
+              </view>
+              <view class='pay_price' data-index="{{index}}">{{item.money}}元 <text>*{{item.month}}个月</text></view>
+            </view>  
+
+            <!-- <view class='flexa1'>
+              <view class="so-3 flexca {{selectIndex==1?'active1':''}}" data-selectIndex='1' bindtap='selectFn'>
+                <view class="so-2 {{selectIndex==1?'active2':''}}"></view>
+              </view>
+              <text>{{payList[1].money}}元*(6个月)</text>
+            </view> -->
+            </view> 
+
+    <view class='pay_detail'>
+    *付款后即表示您已同意
+        <view class='pay_detail_txt' bindtap='paydetail'>《平台协议》</view>
+    </view>
+
+
+
+
+    <!-- 立即支付按钮 -->
+    <button bindtap="goPay">
+        立即支付
+    </button>
+</view> 

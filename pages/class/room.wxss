@@ -1,0 +1,150 @@
+/* 顶部区域筛选 */
+.share-city{
+  width:200rpx;
+  height:48rpx;
+  margin:20rpx auto;
+  border-radius:24rpx;
+  color:#ffffff;
+  background:#333333;
+  opacity:0.2;
+}
+.city-img{
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 26rpx;
+}
+.room_title{
+  color: #fff;
+}
+/* 区域筛选 */
+.section{
+  width:116rpx;
+  height:auto;
+  margin-left:10px;
+  overflow:hidden;  
+  text-overflow:ellipsis;  
+  white-space:nowrap;
+}
+.area-geo{
+  color:#666;
+  font-size: 28rpx;
+  text-align:center;
+  margin-top: 100rpx;
+}
+.share-city text{
+  margin-left: 20rpx;
+}
+/* 商品内容 */
+.among-content{
+  padding-left: 14rpx;
+  padding-right: 14rpx;
+  display: flex;
+  flex-wrap:wrap;
+  /* margin-top: 80rpx; */
+  margin-bottom: 20rpx;
+}
+.shop-box{
+  /* width:340rpx;
+  /* height: 395rpx; */
+ /* background-color: white;
+   margin: 20rpx 11rpx 0; 
+   padding-bottom: 20rpx; */
+  width:340rpx;
+  height: 543rpx;
+  background-color:white;
+  margin:20rpx 11rpx 20rpx;
+  padding-bottom:20rpx;
+  border-radius:8rpx;
+  box-shadow:0rpx 2rpx 8rpx 0rpx rgba(0,0,0,0.2);
+}
+.shop-img{
+  width: 100%;
+  /* height: 340rpx; */
+  /* overflow: hidden; */
+}
+/* .shop-img image{
+  width: 100%;
+  height: 100%;
+} */
+.shop-img image{
+  width: 100%;
+  height: 340rpx;
+}
+.shop-detail{
+  padding:0 20rpx; 
+  overflow: hidden;
+}
+.shop-name{
+  font-size: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  overflow: hidden; 
+  margin-top: 20rpx;
+}
+.op-img{
+  width:  340rpx; 
+  height: 340rpx;
+}
+.op-img image {
+  width: 100%;
+  height: 100%;
+}
+/* .shop-price{
+  font-size: 24rpx; 
+  color: #ff4342;
+  margin-top: 15rpx;
+} */
+.shop-price{
+  font-size:24rpx;
+  color:#ff4342;
+  margin-top:10rpx;
+  display:flex;
+  width:140rpx;
+  align-items:center;
+}
+.shop-border{
+  border: 4rpx solid #14a1fd;
+  width: 22rpx;
+  height: 22rpx;
+  border-radius: 50%;
+}
+.shop-price_text{
+  margin-left:10rpx;
+  color:#333333;
+  font-size:24rpx;
+}
+.shop-shop{
+  width: 100rpx;
+  height: 40rpx;
+}
+.shop-shop image{
+  width: 100%;
+  height: 100%;
+}
+.shop-have text{
+  display: inline-block;
+  margin-right: 20rpx;
+  padding:8rpx 15rpx;
+  background-color: rgba(225,243,255,1);
+  border-radius: 10rpx;
+}
+.shop-have view{
+  display: inline-block;
+  margin-right: 20rpx;
+  padding:8rpx 15rpx;
+  background-color: rgba(225,243,255,1);
+  border-radius: 10rpx;
+}
+.room_border{
+  width:110rpx;
+  height:48rpx;
+  color:#fff;
+  background:#14a1fd;
+  font-size:30rpx;
+  border-radius:8rpx 0rpx 8rpx 0rpx;
+  text-align:center;
+  line-height:48rpx;
+  position:absolute;
+}

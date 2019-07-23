@@ -1,0 +1,252 @@
+page{
+  background-color: #f7f7f7;
+}
+.nav{
+  width:100%;
+  height:100rpx;
+  display:flex;
+  flex-direction:row;
+  background: #fff;
+  border-bottom:4rpx solid #f7f7f7;
+}
+.default{
+  line-height:100rpx;
+  text-align:center;
+  flex:1;
+  font-size:32rpx;
+  color:#666666;
+  margin-left:25rpx;
+}
+.red{
+  line-height: 100rpx;
+  text-align: center;
+  color: #14a1fd;
+  flex: 1;
+  font-size: 32rpx;
+  margin-left:25rpx;
+}
+.nav_underline{
+  background: #14a1fd;
+  width: 65rpx;
+  height: 6rpx;
+  margin-top: -7rpx;
+  margin-left: 79rpx;
+  border-radius: 30rpx;
+}
+.show{
+  display:block;
+}
+.hidden{
+  display:none;
+}
+/*地理坐标*/
+.nav-geo{
+  flex:1;
+  font-size:32rpx;
+  margin-left:53rpx;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+  width: 200rpx;
+  display:flex;
+  color: #14a1fd;
+  align-items: center;
+}
+.area-geo{
+  color:#666;
+  font-size: 28rpx;
+  text-align:center;
+  margin-top: 100rpx;
+}
+.geo-left{
+  height: 37rpx;
+  border-left: 4rpx solid #14a1fd;
+}
+.section{
+  width:126rpx;
+  height:auto;
+  margin-left:10px;
+  overflow:hidden;  
+  text-overflow:ellipsis;  
+  white-space:nowrap;
+}
+.nav-geo image{
+  width:30rpx;
+  height:30rpx;
+  margin-left:20rpx;
+}
+.nav_text{
+  /* position: absolute;
+  right: 22rpx; */
+  /* margin-left: 16rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  max-width: 150rpx;
+  padding:0 15px; */
+  margin-left:20rpx;
+  font-size: 28rpx;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+  width: 126rpx;
+  color:#666666;
+  text-align: center;
+  line-height: 44rpx;
+}
+.default_title{
+  margin-top:32rpx;
+  flex: 1;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+  margin-left:31rpx;
+}
+.default_title image{
+  border-left: 4rpx solid #14a1fd;
+  padding-left: 20rpx;
+}
+.default_title_name{
+  margin-left:75rpx;
+  font-size:28rpx;
+  color:#666666;
+  margin-top:-52rpx; 
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.m0-nav{
+  width: 100%;
+    position: fixed;
+   top: 0;
+   z-index: 10;
+    border: 1px solid #FAFBFC;
+   background-color: #fff;
+}
+ /* 1标题导航 */
+.m0-nav .index-menu{
+   height: 88rpx;
+   width: 100%;
+ }
+.m0-nav .menu-left{
+   height: 100%;
+   width: 100%;
+ }
+.m0-nav .menu-item{
+    width: 50%; 
+   font-size: 32rpx;
+   color: #999;
+ }
+.m0-nav .menu-item .text-box{
+  height: 100%;
+  border-bottom: 5rpx solid transparent;
+}
+.m0-nav  .menu-item  .item-active{
+   color: #14a1fd;
+   border-bottom: 5rpx solid #14a1fd;
+ }
+.m0-nav .menu-mid{
+   height: 38rpx;
+   display: block;
+   border-left: 1rpx solid #14a1fd; 
+   margin-right: 15rpx;
+ }
+.m0-nav .menu-right{
+   height: 80rpx;
+   width: 100%;
+ }
+ .menu-right image{
+   width: 40rpx;
+   height: 32rpx;
+   margin-right: 15rpx;
+ }
+.m0-nav .menu-right{
+   color: #14a1fd;
+   font-size: 28rpx;
+ }
+.m0-nav .menu-right view{
+   /* width: 300rpx; */
+   height: 38rpx;
+   white-space:nowrap;
+  overflow: hidden; 
+ }
+ /* 内容 */
+ .m0-content{
+   margin-top: 168rpx;
+ }
+
+.mt-item{
+  width: 100%;
+  padding: 30rpx 24rpx 20rpx;
+  background-color: #fff;
+  height: 200rpx;
+  margin-bottom: 20rpx;
+}
+.mt-box{
+  padding-left: 160rpx;
+  position: relative;
+}
+.mt-lf{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 160rpx;
+  height: 100%;
+}
+.mt-lf>view{
+  width: 140rpx;
+  height: 140rpx;
+  /* border-radius: 50%; */
+  background-color: #333;
+}
+.mt-rt{
+  position: relative;
+  /* padding-top: 20rpx;  */
+}
+.mt-rt-lt{
+  position: relative;
+  padding-top: 20rpx;
+}
+.mt-rt-box{
+  position: relative;
+}
+.mt-t1{
+  margin-right: 30rpx;
+}
+.mt-t2{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 30rpx;
+}
+.mt-t2 image{
+  vertical-align: top;
+}
+.mt-t3a{
+  display: inline-block;
+  margin: 0 15rpx;
+  height: 26rpx;
+  border-left: 2rpx solid #999;
+}
+.huo{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.f300{
+  margin-top: 20rpx;
+
+}

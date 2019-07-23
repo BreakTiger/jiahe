@@ -1,0 +1,93 @@
+<view class='send-container'>
+  <!-- 没有老师投递的情况 -->
+  <view wx:if="{{tuiData == ''}}">
+    <view class='pubish_img'>
+      <image src="/images/5user/p_default@2x.png"></image>
+    </view>   
+     <view class='send-mo'>还没有收到投递简历哦~</view>
+  </view>
+  <!-- //有投递的情况 -->
+   <view class='teacher' bindtap="teacher_detail" wx:for="{{tuiData}}" data-id='{{item}}' wx:key="unique" bindtap='detailInto1'>
+      <view class='teacherjob'>
+          <view class='teacher-job'>投递职位： <text>{{item.position.jobname}}</text> </view>
+      </view>
+      <view class='nav-teacher'>
+              <!-- <image class='teacher-img' src="/images/3school/bbk@2x.png"></image> -->
+              <view class='teacher-img'>
+                   <image  src="{{item.teacher.teacherimage}}"></image> 
+              </view> 
+              <text class='teacher-name'>{{item.teachername}}</text>
+        <view class='teacher-sex'  wx:if="{{item.sex=='女'}}">
+                 <image src="/images/1teacher/h_famale@2x.png"></image>
+        </view>
+        <view class='teacher-sex'  wx:if="{{item.sex=='男'}}">
+                 <image src="/images/1teacher/h_male@2x.png"></image>
+        </view>
+        <view class='teacher-edu'>
+              <text class='teacher-time'>{{item.teacherage}}</text>
+              <text class='teacher-border'></text>
+              <text>{{item.education}}</text>
+        </view>
+         <text class='teacher-region'>{{item.show_address}}</text>
+      </view>
+      <view class='teacher-skill'>
+            <view class='skill-border'>{{item.subject}}</view>
+            <view class='skill-border_o'>{{item.major}}</view>
+      </view>
+      <view class='teacher-brief '>
+             <view class='brief'>{{item.introduce}}</view>
+      </view>
+        <!-- 下划线隔开的距离 -->
+          <view class='item-interval'></view>
+    </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <view class='mt-list'>
+        <block  wx:key="tuiData" wx:for="{{tuiData}}">
+          <view class='mt-item'  data-items='{{item}}'  bindtap='detailInto1'>
+            <view class='wh100 mt-box'>
+              <view class='mt-lf'>
+                <view>
+                  <image mode='widthFix' class='img-w' src='{{item.teacher.teacherimage}}'></image>
+                </view>
+              </view>
+              <view class='mt-rt'>
+                <view class='flex mt-rt-box flexba'>
+                  <view class='flexba'>
+                    <text class='mt-t1 d000 f32'>{{item.teachername}}</text>
+                    <view wx:if="{{item.sex==1?true:''}}" class='mt-t2 f28'>
+                      <image mode='widthFix' class='img-w' src='../../../imgs/index/sex1.png'></image>
+                    </view>
+                      <view  wx:if="{{item.sex==2?true:''}}" class='mt-t2 f28'>
+                      <image mode='widthFix' class='img-w' src='../../../imgs/index/sex2.png'></image>
+                    </view>
+                    <view>
+                      <text class='mt-t3 f28'>{{item.teacherage}}</text>
+                      <text class='mt-t3a'></text>
+                      <text class='mt-t4 f28'>{{item.education}}</text>
+                    </view>
+                  </view>
+                   <text class='mt-t5 f26 acl9'>{{item.position.address}}</text> 
+                </view>
+                <view class='mt15 d000'>
+                  <text class='f28 acl9'>{{item.major}}</text>
+                </view>
+                <view class='mt15 d000'>
+                  <text class='f26  acl6'>{{item.introduce}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+
+      </view> -->

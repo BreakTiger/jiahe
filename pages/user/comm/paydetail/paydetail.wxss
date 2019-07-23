@@ -1,0 +1,13 @@
+.paytext{
+  margin-left: 24rpx;
+  margin-top: 30rpx;
+  color: #14a1fd;
+  font-size: 28rpx;
+}
+.paywidth{
+  width:702rpx;
+  margin:30rpx auto;
+  color:#666;
+  line-height:65rpx;
+  font-size:30rpx;
+}

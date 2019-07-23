@@ -1,0 +1,145 @@
+<view class="hong-container">
+
+  <!-- 2表单填写 -->
+  <view class='hong-contant'>
+    <form bindsubmit="teformSubmit">
+      <view class='contant-teamwork clear'>
+        <view class='teamwork-inputs'>
+          <view class='inputs-box flexba'>
+            <view>
+              <text>职位名称</text>
+            </view>
+            <input maxlength="20" name="duty" placeholder='请输入职位名称'  />
+          </view>
+          <view class='inputs-box flexba' data-cheid='1' bindtap='translateN'>
+            <view>
+              <text>薪资水平</text>
+            </view>
+            <view class='flexa inputext'>
+              <text wx:if="{{textHave1}}">{{textHave1}}</text>
+              <image src='../../../imgs/user/right.png'></image>
+              <input style='display:none' name="pay" value="{{textHave1}}" />
+            </view>
+          </view>
+          <view class='inputs-box flexba' bindtap="translate">
+            <view>
+              <text>工作地址</text>
+            </view>
+            <view class='flexa inputext'>
+              <text class='address'>{{valuetext}}</text>
+              <image src='../../../imgs/user/right.png'></image>
+              <input style='display:none' name="address" value="{{valuetext}}" />
+            </view>
+          </view>
+
+          <view class='inputs-box flexba'>
+            <view>
+              <text>教龄要求</text>
+            </view>
+            <input maxlength="20" name="experience" placeholder='请输入学校名称' />
+          </view>
+          <view class='inputs-box flexba' data-cheid='2' bindtap='translateN'>
+            <view>
+              <text>学历要求</text>
+            </view>
+            <view class='flexa inputext'>
+              <text>{{textHave2}}</text>
+              <image src='../../../imgs/user/right.png'></image>
+              <input style='display:none' name="education" value="{{textHave2}}" />
+            </view>
+          </view>
+          <view class='inputs-box flexba'>
+            <view>
+              <text>联系电话</text>
+            </view>
+            <input maxlength="11" type="number" name="phone" placeholder='请输入联系电话' />
+          </view>
+          <view class='content-textrea'>
+            <view class='item-box'>
+              <textarea wx:if="{{show&&showN}}" placeholder='建议填写岗位职责,岗位要求' name="introduce"></textarea>
+            </view>
+          </view>
+        </view>
+        <!-- 提交按钮 -->
+        <!-- <view class='bt-fixed'> -->
+        <button class='teamwork-btn flexca' formType="submit">
+          <text>发布</text>
+        </button>
+        <!-- </view> -->
+      </view>
+    </form>
+  </view>
+</view>
+<!-- 地址 -->
+<view class="animation-element-wrapper animation-element-addr" animation="{{animation}}" style="visibility:{{!show ? 'visible':'hidden'}}" bindtap="hiddenFloatView" data-id="addr">
+  <view class="animation-element">
+    <text class="left-bt" catchtap="hiddenFloatView" data-id="555">取消</text>
+    <text class="right-bt" catchtap="hiddenFloatView" data-id="666">确定</text>
+    <view class="line"></view>
+
+    <picker-view indicator-style="height: 50rpx;" indicator-class="ccc" value="{{value}}" bindchange="bindChange">
+      <!--省-->
+      <picker-view-column>
+        <view wx:for="{{provinces}}" wx:for-item="sheng" wx:key="">
+          {{sheng.name}}
+        </view>
+      </picker-view-column>
+      <!--地级市-->
+      <picker-view-column>
+        <view wx:for="{{citys}}" wx:key="">
+          {{item.name}}
+        </view>
+      </picker-view-column>
+      <!--区县-->
+      <picker-view-column>
+        <view wx:for="{{countys}}" wx:key="">
+          {{item.name}}
+        </view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>
+<!-- 分界线-->
+<view class="animation-element-wrapper" animation="{{animationN}}" style="visibility:{{showN ? 'hidden':'visible'}}" bindtap="hiddenFloatViewN">
+  <view class="animation-element">
+    <text class="left-bt" catchtap="hiddenFloatViewN" data-id="a1">取消</text>
+    <text class="right-bt" catchtap="hiddenFloatViewN" data-id="a2">确定</text>
+    <view class="line"></view>
+    <picker-view indicator-style="height: 50rpx;" indicator-class="ccc" value="{{valueN}}" bindchange="pickerChangeN">
+      <!--年-->
+      <picker-view-column style="margin: 0 200rpx;">
+        <view wx:for="{{perHaveN}}" wx:key="perHaveN">
+          {{item}}
+        </view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>
+<!-- 日期 -->
+<view class="animation-element-wrapper" animation="{{animationd}}" style="visibility:{{showd ? 'hidden':'visible'}}" bindtap="hiddenFloatViewDate" data-id="date">
+  <view class="animation-element">
+    <text class="left-bt" catchtap="hiddenFloatViewDate" data-id="777">取消</text>
+    <text class="right-bt" catchtap="hiddenFloatViewDate" data-id="888">确定</text>
+    <view class="line"></view>
+    <picker-view indicator-style="height: 50rpx;" indicator-class="ccc" value="{{picker_value}}" bindchange="pickerChangeDate">
+      <!--年-->
+      <picker-view-column>
+        <view wx:for="{{picker_year}}" wx:for-item="onlyyear" wx:key="year1">
+          {{onlyyear}}
+        </view>
+      </picker-view-column>
+      <!--月-->
+      <picker-view-column>
+        <view wx:for="{{picker_month}}" wx:for-item="onlymonth" wx:key="month1">
+          {{onlymonth}}
+        </view>
+      </picker-view-column>
+      <!--日-->
+      <picker-view-column>
+        <view wx:for="{{picker_days}}" wx:for-item="onlyday" wx:key="day1">
+          {{onlyday}}
+        </view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>

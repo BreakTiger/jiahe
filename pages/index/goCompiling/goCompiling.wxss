@@ -1,0 +1,74 @@
+/* 考编信息图片名字 */
+.compiling_head{
+  display: flex;
+}
+.head_img{
+  margin-top: 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 24rpx;
+}
+.head_img image{
+  width: 100%;
+  height: 100%;
+}
+.head_txt{
+  margin-top:34rpx;
+  margin-left:20rpx;
+  color:#333;
+  font-size:28rpx;
+  font-weight:bold;
+}
+.head_btn{
+  width:132rpx;
+  height:48rpx;
+  border-radius:8rpx;
+  background:#14a1fd;
+  color:#ffffff;
+  font-size:27rpx;
+  text-align:center;
+  line-height:42rpx;
+  position:absolute;
+  top:35rpx;
+  right:30rpx;
+}
+/*下划线分隔符*/
+.compiling_underline{
+  margin-top:20rpx;
+  width:100%;
+  height:20rpx;
+  background:#f7f7f7;
+}
+  /* 最新考编信息 */
+  .new_compiling{
+  display: flex;
+  width: 100%;
+  margin-top: 20rpx;
+  }
+.new_img{
+  width: 35rpx;
+  height: 35rpx;
+  margin-top: 20rpx;
+  margin-left: 24rpx;
+}
+.new_img image{
+  width: 100%;
+  height: 100%;
+}
+.new_txt{
+  margin-left:20rpx;
+  font-weight:bold;
+  font-size:28rpx;
+  margin-top:10px;
+}
+/* 考编内容框 */
+.compiling_content{
+  margin-top: 37rpx;
+}
+.content_{
+  width:702rpx;
+  margin-left:24rpx;
+  color:#666666;
+  font-size:24rpx;
+  line-height: 44rpx;
+}

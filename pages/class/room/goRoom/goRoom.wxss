@@ -1,0 +1,160 @@
+/* 1轮播部分 **********/
+.banner-box {
+  /* position: relative; */
+  background-color: #fff;
+  height: 500rpx;
+  /* border-bottom-left-radius: 20%; 
+   border-bottom-right-radius: 20%;  */
+  overflow: hidden;
+}
+
+.home-banner {
+  width: 100%;
+  height: 500rpx;
+}
+
+.home-banner image {
+  width: 100%;
+  height: 100%;
+}
+/*详情标题*/
+.goRoom_title{
+  margin-top: 40rpx;
+  display: flex;
+}
+.room_title{
+  width: 595rpx;
+  margin-left: 24rpx;
+  font-size: 32rpx;
+  color: #333333;  
+  font-weight: bold;
+}
+.room_title_right{
+  color: #ff4a4a;
+  font-size: 24rpx;
+  margin-top: 6rpx;
+  width: 110rpx;
+}
+.goRoom_time{
+  color: #ff4a4a;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  margin-left: 24rpx;
+}
+.goRoom_condition{
+  margin: 20rpx;
+  display: flex;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  /* justify-content:center; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
+  /* justify-content: center; */
+}
+.condition{
+  /* width:115rpx;
+  height:48rpx; */
+  text-align:center;
+  background-color:rgba(225,243,255,1);
+  color:#333333;
+  font-size:24rpx;
+  margin:0 15rpx 0 15rpx;
+  border-radius:8rpx;
+  line-height:25rpx;
+  padding:15rpx 15rpx 15rpx 15rpx;
+  width:auto;
+}
+.goRoom_name {
+  margin-top: 35rpx;
+  margin-left: 20rpx;
+  display: flex;
+  width: 100%;
+}
+.room-img{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+.room-img image{
+  width: 100%;
+  height: 100%;
+}
+.goRoom_txt{
+  margin-top: 10rpx;
+  color: #333333;
+  font-size: 28rpx;
+  margin-left: 20rpx;
+  width: 350rpx;
+}
+/*下划线*/
+.goRoom_underline{
+  width: 100%;
+  height: 20rpx;
+  background: #f7f7f7;
+  margin-top: 30rpx;
+}
+/* 教室详情 */
+.title_box{
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+  color: #333333;
+  font-size: 32rpx;
+  border-bottom:4rpx solid #f7f7f7;
+  height:60rpx
+}
+.title_box_txt{
+  margin-left: 20rpx;
+  color:#333333;
+  font-size:32rpx;
+}
+.content_box{
+  width: 702rpx;
+  margin-top: 20rpx;
+  margin-left: 24rpx;
+  font-size: 32rpx;
+  color: #999999;
+}
+.box_img{
+  margin-top: 20rpx;
+  margin-left: 24rpx;
+  width: 702rpx;
+}
+.box_img image{
+  width: 100%;
+}
+.m0-while{
+  width: 100%;
+  height: 200rpx;
+}
+/*
+.mar-bo{
+  margin-bottom: 200rpx;
+} */
+/*立即抢租按钮*/
+/* .room_btn{
+  width: 100%;
+  position: fixed;
+  bottom: 30rpx;
+}
+button{
+  width: 350rpx;
+  border-radius: 40rpx;
+  color: #ffffff;
+  background: #14a1fd;
+} */
+/*发送简历按钮*/
+.add_btn{
+width: 100%;
+position: fixed;
+bottom: 40rpx;
+}
+button{
+margin-top: 30rpx;
+width: 360rpx;
+height: 80rpx;
+border-radius: 40rpx;
+background: #14a1fd;
+color: #fff;
+box-shadow: 0rpx 3rpx 7rpx 0rpx rgba(20,161,253,0.35);
+font-size: 32rpx;
+}

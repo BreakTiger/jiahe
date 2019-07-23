@@ -1,0 +1,114 @@
+<view class='teamwork_container'>
+  <!-- tab选框 -->
+    <view class="body">
+      <view class="nav bc_white">
+          <view class="{{selected?'red':'default'}}" bindtap="selected" data-index="{{1}}">
+              整合上市
+              <view class="{{selected?'nav_underline':''}}"></view> 
+          </view>
+          <view class="{{selected1?'red':'default'}}" bindtap="selected1" data-index="{{2}}">
+              异业合作
+              <view class="{{selected1?'nav_underline':''}}"></view>
+          </view>
+      <view class='nav-geo'>
+        <view class="geo-left"></view>
+        <image src="/images/1teacher/ads@2x.png"></image>
+        <view class="section">
+          <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <view class="picker" style='overflow:hidden;text-overflow:ellipsis;white-space:nowrap;'>
+              {{region[0]}}
+            </view>
+          </picker>
+        </view>
+     </view>  <!-- 地理坐标选择 -->
+</view>
+      <!-- 整合上市------------------------------------ -->
+          <view class="{{selected?'show':'hidden'}}">
+          <view class='area-geo' wx:if="{{integration  == ''}}">该地区暂无~</view>
+                 <view class='m0-all'>
+                     <view class='mt-list'>
+                      <block wx:key="allData">
+                        <!-- <view class='mt-item' data-items='{{item}}' bindtap='detailInto'> -->
+                         <view class='mt-item' wx:for="{{integration}}"  wx:if="{{item.itemtype == 1}}" data-id='{{item}}' bindtap="goIntent" wx:key="unique">
+                          <view class='wh100 mt-box' >
+                            <view class='mt-lf'>
+                              <view>
+                                    <image mode='widthFix' class='img-w' src='{{item.principal.principalimage}}'></image>
+                              </view>
+                            </view>
+                            <view class='mt-rt'>
+                              <view class='flex mt-rt-box flexba'>
+                                <view class='flexba'>
+                                  <view>
+                                       <text class='f30  acl3' style='font-weight:bold'>{{item.itemname}}</text>
+                                  </view>
+                                </view>
+                                    <text class='mt-t5 f26 acl9'>{{item.dizhi}}</text>
+                              </view>
+                              <view class='mt15 acl9 flexa' style='height:45rpx;'>
+                                      <text class='mt-t3 f26'>建校时间</text>
+                                      <text class='mt-t3a'></text>
+                                      <text class='mt-t4 f26'>{{item.principal.establish}}</text>
+                              </view>
+                              <view class='mt15 acl9 flexa' style='height:45rpx;'>
+                                      <text class='mt-t3 f26'>学生人数</text>
+                                      <text class='mt-t3a'></text>
+                                      <text class='mt-t4 f26'>{{item.principal.studentnum}}</text>
+                              </view>
+                            </view>
+                          </view>
+                        </view>
+                      </block>
+                </view>
+    </view>  
+        <!-- *********************************************************************************************** -->
+  <view class='page-add-data flexca' wx:if="{{integration != ''}}">
+      <text>{{pageTottomText}}</text>
+  </view>
+  </view> 
+
+
+
+<view class="{{selected1?'show':'hidden'}}">
+<view class='area-geo' wx:if="{{integrationCoo  == ''}}">该地区暂无~</view>
+  <view class='m0-all'>
+    <view class='mt-list' >
+                      <block wx:key="allData">
+                        <!-- <view class='mt-item' data-items='{{item}}' bindtap='detailInto'> -->
+                         <view class='mt-item' wx:if="{{item.itemtype == 2}}" bindtap="goSchool_cooperation" wx:for="{{integrationCoo}}" data-id='{{item}}' wx:key="unique">
+                          <view class='wh100 mt-box'>
+                            <view class='mt-lf'>
+                              <view>
+                                <image mode='widthFix' class='img-w' src='{{item.principal.principalimage}}'></image>
+                              </view>
+                            </view>
+                            <view class='mt-rt-lt'>
+                              <view class='flex mt-rt-box flexba'>
+                                <view class='flexba'>
+                                  <view>
+                                    <text class='f30  acl3' style='font-weight:bold'>{{item.itemname}}</text>
+                                  </view>
+                                </view>
+                                <text class='mt-t5 f26 acl9'>{{item.distance}}</text>
+                              </view>
+                              <view class='mt15 acl9 flexa' style='height:45rpx;'>
+                                <text class='mt-t3 f26'>主要课程</text>
+                                <text class='mt-t3a'></text>
+                                <text class='mt-t4 f26'>{{item.principal.session}}</text>
+                              </view>
+                            </view>
+                          </view>
+                        </view>
+                      </block>
+                </view>
+                   <!-- *********************************************************************************************** -->
+        <view class='page-add-data flexca' wx:if="{{integrationCoo != ''}}">
+            <text>{{pageTottomText}}</text>
+        </view>     
+              </view>  
+        </view>   
+    </view>
+
+    
+</view>
+

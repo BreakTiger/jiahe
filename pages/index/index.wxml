@@ -1,0 +1,134 @@
+<view class='container' class='detelecon'>
+  <!-- 轮播图 -->
+      <view class="banner-box">
+        <swiper class="home-banner swiper" indicator-dots="true" autoplay="true" indicator-color="rgba(255,255,255,0.4)" indicator-active-color="rgba(255,255,255,1)" circular='true' interval="3000" duration="1000">
+          <block wx:key="unique"  wx:for="{{slider}}" wx:for-index="index">
+            <swiper-item>
+              <image class="banner-img" src="{{item.image}}" bindtap='clickBanner'data-id="{{item}}" data-banner="{{item}}" data-index="{{index}}" class="slide-image" mode="aspectFill" />
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+  <!-- nav导航 -->
+  <view class="nav bc_white">
+      <view class="{{selected?'red':'default'}}" bindtap="selected">
+        代课职位
+        <view class="{{selected?'nav_underline':''}}"></view>
+    </view>
+    <view class="{{selected1?'red':'default'}}" bindtap="selected1">代课名师
+      <view class="{{selected1?'nav_underline':''}}"></view>
+    </view>
+    <!-- 地理位置选择 -->
+    <view class='nav-geo' bindtap="areaGeo">
+        <view class="geo-left"></view>
+        <image src="/images/1teacher/ads@2x.png"></image>
+        <view class="section">
+          <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <view class="picker" style='overflow:hidden;text-overflow:ellipsis;white-space:nowrap;'>
+              {{region[0]}}
+            </view>
+          </picker>
+        </view>
+     </view>
+  </view>
+<!-- end 地理位置 -->
+  <view class="{{selected?'show':'hidden'}}">
+    <!-- 任职内容 -->
+      <!-- //地区筛选没有 -->
+    <view class='area-geo' wx:if="{{job  == ''}}" >该地区暂无~</view> 
+    <view wx:if="{{hasRefesh}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+      <icon type="waiting" size="45"/><text>刷新中...</text></view>
+      <view wx:else  style="display:none" ><text></text></view>
+
+      <!-- //地区筛选有的情况 -->
+    <view wx:for="{{job}}" wx:key="unique" wx:if="{{job.address != '[]'}}">
+      <view class="index_content">
+        <!-- 代课老师 地区 培训学校 -->
+          <view class='in_list' data-id='{{item}}' bindtap='teach_job'>
+              <text class='li_name'>{{item.jobname}}</text>
+                  <view class='li_comm'>
+                      <text class='comm_geo'>{{item.address}}</text>
+                      <view class='comm_bo'></view>
+                      <text class='comm_teacher'>{{item.experience}}</text>
+                      <view class='comm_bo'></view>
+                      <text class='comm_teacher'>{{item.education}}</text>
+                  </view>
+              <view>
+                <view class='in_co'>
+                      <view class='index_img'>
+                          <image src="{{item.user.principalimage}}"></image>
+                      </view>
+                      <view class='in_txt'>{{item.user.schoolname}}</view>
+                </view>
+              </view>
+          </view>
+          <!-- 考编信息 -->
+          <view class='in_info' bindtap='changeToExamination' data-id='{{item}}'>
+              <text style="text-align:center;line-height:37rpx;">考编信息</text>
+          </view>
+     </view>
+             <!-- 间隔符下划线 -->
+          <view class='item-interval'></view>
+    </view>
+    <!-- 下拉刷新********************************************************************* -->
+  <view class='page-add-data flexca' wx:if="{{job.length > 10}}">
+      <text>{{pageTottomText}}</text>
+  </view>
+  </view>
+
+
+  <!-- 切换代课老师 -->
+  <view class="{{selected1?'show':'hidden'}}">
+
+<view class='area-geo' wx:if="{{teacherData  == ''}}">该地区暂无~</view>
+    <view class='teacher' bindtap="teacher_detail" wx:for="{{teacherData}}" data-id='{{item}}' wx:key="unique">
+      <view class='nav-teacher'>
+              <!-- <image class='teacher-img' src="/images/3school/bbk@2x.png"></image> -->
+              <view class='teacher-img'>
+                   <image  src="{{item.teacherimage}}"></image> 
+              </view> 
+              <text class='teacher-name'>{{item.teachername}}</text>
+        <view class='teacher-sex'  wx:if="{{item.sex=='女'}}">
+                 <image src="/images/1teacher/h_famale@2x.png"></image>
+        </view>
+        <view class='teacher-sex'  wx:if="{{item.sex=='男'}}">
+                 <image src="/images/1teacher/h_male@2x.png"></image>
+        </view>
+        <view class='teacher-edu'>
+              <text class='teacher-time'>{{item.teacherage}}</text>
+              <text class='teacher-border'></text>
+              <text>{{item.education}}</text>
+        </view>
+         <text class='teacher-region'>{{item.show_address}}</text>
+      </view>
+      <view class='teacher-skill'>
+            <view class='skill-border'>{{item.subject}}</view>
+            <view class='skill-border_o'>{{item.major}}</view>
+      </view>
+      <view class='teacher-brief '>
+             <view class='brief'>{{item.introduce}}</view>
+      </view>
+        <!-- 下划线隔开的距离 -->
+          <view class='item-interval'></view>
+    </view>
+<!-- *********************************************************************************************** -->
+  <view class='page-add-data flexca' wx:if="{{teacherData.length > 10}}">
+      <text>{{pageTottomText}}</text>
+  </view>
+
+
+  </view>
+
+
+
+<!--客服  -->
+<view>
+  <image src='/images/1teacher/icon_servise@2x.jpg' class='card-img'>
+    <button open-type="contact" class='card-img' style="opacity:0">进入客服会话</button>
+  </image>
+  <button open-type="contact" class='buy'></button>
+</view>
+
+
+</view>
+

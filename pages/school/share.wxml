@@ -1,0 +1,146 @@
+
+<!-- 切换标题 -->
+<view class="body">
+  <view class="nav bc_white">
+    <view class="{{selected?'red':'default'}}" bindtap="selected">
+      资质学校
+      <view class="{{selected?'nav_underline':''}}"></view>
+    </view>
+    <view class="{{selected1?'red':'default'}}" bindtap="selected1">
+    我要加盟
+      <view class="{{selected1?'nav_underline':''}}"></view>
+    </view>
+    <!-- 地理坐标选择 -->
+      <view class='nav-geo'>
+        <view class="geo-left"></view>
+        <image src="/images/1teacher/ads@2x.png"></image>
+        <view class="section">
+          <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <view class="picker" style='overflow:hidden;text-overflow:ellipsis;white-space:nowrap;'>
+              {{region[0]}}
+            </view>
+          </picker>
+        </view>
+     </view>
+  </view>
+
+  <view class="{{selected?'show':'hidden'}}">
+
+    <view class='share-container'>
+    
+<view class='area-geo' wx:if="{{shareSchool  == ''}}">该地区暂无~</view>
+      <!-- 分享学校 -->
+      <view class='share-list'>
+        <block wx:key="shares"  wx:if="{{item.typenum == 2}}" wx:for="{{shareSchool}}" data-id='{{item}}' wx:key="unique">
+          <view class='list-item'>
+            <view class='item-top'>
+              <view class='top-box'>
+                <view class='top-img'>
+                  <view class='image-full top-img-a'>
+                    <image class='img-www' src='{{item.image}}'></image>
+                  </view>
+                  <!-- <view class='top-img-b'>
+                    <image class='image-full' src='../../imgs/index/idty.png'></image>
+                  </view> -->
+                </view>
+                <view class='top-text'>
+                  <view class='flexa f30 acl3' style='margin-right:150rpx;line-height:55rpx;font-weight:bold'>
+                    <text>文化类资质学校</text>
+                    <!-- <text class='top-line1'></text>
+                    <text>{{item.principal.session}}</text> -->
+                  </view>
+                  <view class='flexa f24 acl6' style='line-height:35rpx;height:40rpx;'>
+                    <text>注册时间</text>
+                    <text class='top-line2'></text>
+                    <text>{{item.principal.establish}}</text>
+                  </view>
+                  <view class='flexa f24 acl6' style='line-height:35rpx;height:40rpx;'>
+                    <text>注册地点</text>
+                    <text class='top-line2'></text>
+                    <text>{{item.principal.zcaddress}}</text>
+                  </view>
+                </view>
+
+              </view>
+            </view>
+
+            <!-- 立即沟通 -->
+             <!-- <view class='linkup' bindtap='phoneFn' data-phone='{{item.principal.phone}}' >
+              <view class='mar'>
+                   <text>立即沟通</text>
+                  <image src="/images/3school/s_next@3x.png"></image>
+              </view>
+            </view>  -->
+
+          </view>
+        </block>
+
+      </view>
+    </view>
+  <!-- &&底部加载 -->
+  <view class='page-add-data flexca' wx:if="{{shareSchool != ''}}">
+       <text>{{pageTottomText}}</text>
+  </view>
+
+</view>
+
+  <view class="{{selected1?'show':'hidden'}}">
+<view class='area-geo' wx:if="{{shareData  == ''}}">该地区暂无~</view>
+    <view class='share-container'>
+      <!-- 需求学校 -->
+      <view class='share-list'>
+        <block wx:key="shares" wx:for="{{shareData}}"  wx:if="{{item.typenum == 1}}" data-id='{{item}}' wx:key="unique">
+          <view class='list-item'>
+            <view class='item-top'>
+              <view class='top-box'>
+                <view class='top-img'>
+                  <view class='image-full top-img-a'>
+                    <image class='img-www' src='{{item.image}}'></image>
+                  </view>
+                  <!-- <view class='top-img-b'>
+                    <image class='image-full' src='../../imgs/index/idty.png'></image>
+                  </view> -->
+                </view>
+                <view class='top-text'>
+                  <view class='flexa f30 acl3' style='margin-right:150rpx;line-height:55rpx;font-weight:bold'>
+                    <text>我要加盟校</text>
+                    <!-- <text class='top-line1'></text>
+                    <text>{{item.principal.session}}</text> -->
+                  </view>
+                  <view class='flexa f24 acl6' style='line-height:35rpx;height:40rpx;'>
+                    <text>注册时间</text>
+                    <text class='top-line2'></text>
+                    <text>{{item.principal.establish}}</text>
+                  </view>
+                  <view class='flexa f24 acl6' style='line-height:35rpx;height:40rpx;'>
+                    <text>注册地点</text>
+                    <text class='top-line2'></text>
+                    <text>{{item.principal.zcaddress}}</text>
+                  </view>
+                </view>
+                <!-- <view class='top-city f24 acl6'>
+                  <text>{{item.principal.address}}</text>
+                </view> -->
+              </view>
+            </view>
+
+            <!-- 立即沟通 -->
+             <!-- <view class='linkup' bindtap='phoneFn'  data-phone='{{item.principal.phone}}'>
+              <view class="mar">
+                  <text>立即沟通</text>
+                  <image src="/images/3school/s_next@3x.png"></image>
+              </view>
+            </view>  -->
+  <view class='page-add-data flexca' wx:if="{{shareData != ''}}">
+         <text>{{pageTottomText}}</text>
+  </view>
+          </view>
+        </block>
+    </view>
+      </view>
+
+
+
+
+  </view>
+</view>

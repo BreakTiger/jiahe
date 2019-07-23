@@ -1,0 +1,25 @@
+<!-- 立即沟通 -->
+<view class='communication_container'>
+    <!-- <view class='commum'>
+        <text class='comm_txt'>微信沟通</text>
+        <view class='commun_co' bindtap="callPhone">
+            <image src='/images/1teacher/call@2x.png'></image>    
+        </view>
+    </view> -->
+
+  <!-- 微信沟通二维码 -->
+<view class='comm_txt'>微信沟通</view>
+
+<view class='comm-flex'>点开二维码--发送至本人微信--识别二维码</view>
+
+  <view class='commun-er'>
+      <view class='commun-er-img'>
+        <image src="{{wxcode.user.ercode}}" wx:if="{{wxcode.user}}" bindtap='previewImage'></image>
+        <image src="{{wxcode.principal.ercode}}" wx:if="{{wxcode.principal}}" bindtap='previewImage_one'></image>
+        <image src="{{wxcode.ercode}}" wx:else bindtap='previewImage_two'></image> 
+      </view>
+  </view>
+
+
+
+</view>

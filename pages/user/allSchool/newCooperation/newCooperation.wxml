@@ -1,0 +1,58 @@
+<view class='newjob-container'>
+  <!-- 表单提交 -->
+   <form bindsubmit="formCoo">
+      <!-- 工作地点 -->
+       <view class='inputs-box flexba'>
+            <view class='input-text'>
+              <text>项目类型</text>
+            </view>
+            <view class='flexa inputext'>
+            <view class="section">
+              <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="picker">
+                  {{array[index]}}
+                </view>
+              </picker>
+            </view>
+            <image src="/images/5user/u_back@2x.png" style="width:12rpx;height:20rpx;margin-left:15rpx;position:relative;top:3rpx;"></image>
+           <input style='display:none' maxlength="20" name="itemtype" placeholder='请输入职位名称' value=" {{index}}" />
+          </view>
+     </view>
+
+         <view class='inputs-box flexba'>
+            <view class='input-text'>
+              <text>项目名称</text>
+            </view>
+            <view class='flexa inputext'>
+            <input maxlength="20" name="itemname" placeholder='请输入您的合作项目名称' value="" />
+          </view>
+     </view>
+
+       <!-- 合作计划  -->
+       <view class='content-textrea'>
+            <view class='item-box'>
+              <textarea placeholder='合作计划' name="plan" value=""></textarea>
+            </view>
+          </view>
+
+    <!-- 教室轮播图 -->
+    <view class='new-banner'>请在下面上传学校荣誉图片</view>
+    <view wx:if="{{schoolImg}}">
+        <view class='newimg' bindtap="cooImg">
+                <image src="{{schoolImg}}" style="width:100%;height:100%;"></image>
+            <!-- <image src="{{user.image}}" style="width:100%;height:100%;"></image> -->
+        </view>
+    </view> 
+     <view wx:else>
+        <view class='newimg' bindtap="cooImg">
+             <image src="/images/5user/add_pic@2x.png" style="width:100%;height:100%;"></image>
+        </view>
+    </view> 
+  <button class='bf-btn'  formType="submit">
+      发布
+  </button> 
+   
+   </form>
+</view>
+
+

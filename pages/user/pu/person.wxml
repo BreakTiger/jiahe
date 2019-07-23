@@ -1,0 +1,190 @@
+<view class="hong-container">
+
+  <!-- 2表单填写 -->
+  <view class='hong-contant'>
+    <form bindsubmit="teformSubmit">
+      <view class='contant-teamwork clear'>
+        <view class='teamwork-inputs'>
+          <view class='inputs-box flexba'>
+            <view>
+              <text class='inputs_list'>姓名</text>
+            </view>
+            <input maxlength="20" name="name" placeholder='请输入您的姓名' value="{{user.name!=null?user.name:''}}" />
+          </view>
+
+          <!-- 性别、出生日期、求职状态、教龄等信息 -->
+          <view class='inputs-box flexba'>
+            <view>
+              <text class='inputs_list'>性别</text>
+            </view>
+            <input maxlength="20" name="sex" value="请选择" />
+            <view class='input_right'><image src="/images/5user/u_back@2x.png"></image></view>
+          </view>
+          
+          <!-- <view class='inputs_big flexba'>
+            <view>
+              <view class='inputs_indiv'>性别</view>
+            </view>
+            <input maxlength="20" name="sex" value="请选择" />
+            <view><image style="width: 16rpx; height: 20rpx;" src="/images/5user/u_back@2x.png"></image></view>
+          </view> -->
+
+          <view class='inputs_big flexba'>
+            <view>
+              <view class='inputs_indiv'>出生日期</view>
+            </view>
+            <input maxlength="20" name="birthday" value="1998-10-24" />
+            <view><image style="width: 16rpx; height: 20rpx;" src="/images/5user/u_back@2x.png"></image></view>
+          </view>
+
+           <view class='inputs_big flexba'>
+            <view>
+              <view class='inputs_indiv'>求职状态</view>
+            </view>
+            <input maxlength="20" name="jobStatus" value="在职" />
+            <view><image style="width: 16rpx; height: 20rpx;" src="/images/5user/u_back@2x.png"></image></view>
+          </view>
+
+          <view class='inputs_big_o flexba'>
+            <view>
+              <view class='inputs_indiv'>教龄</view>
+            </view>
+            <input maxlength="20" name="teacherAge" value="3年" />
+          </view>
+           
+          <view class='inputs_big flexba'>
+            <view>
+              <view class='inputs_indiv'>学历</view>
+            </view>
+            <input maxlength="20" name="jobStatus" value="本科" />
+            <view><image style="width: 16rpx; height: 20rpx;" src="/images/5user/u_back@2x.png"></image></view>
+          </view>
+
+          <view class='inputs_big flexba'>
+            <view>
+              <view class='inputs_indiv'>擅长科目</view>
+            </view>
+            <input maxlength="20" name="jobStatus" value="浙江省-杭州市-江干区" />
+            <view><image style="width: 16rpx; height: 20rpx;" src="/images/5user/u_back@2x.png"></image></view>
+          </view>
+        
+         <view class='inputs_big_o flexba'>
+            <view>
+              <view class='inputs_indiv'>特色社团课</view>
+            </view>
+            <input maxlength="20" name="teacherAge" value="填写例如：针灸、健美操等" />
+          </view>
+
+          <view class='inputs_big_o flexba'>
+            <view>
+              <view class='inputs_indiv'>所修专业</view>
+            </view>
+            <input maxlength="20" name="teacherAge" value="数学师范" />
+          </view>       
+
+          <view class='inputs_big flexba'>
+            <view>
+              <view class='inputs_indiv'>编制教师编考</view>
+            </view>
+            <input maxlength="20" name="jobStatus" value="希望报考编制教师" />
+            <view><image style="width: 16rpx; height: 20rpx;" src="/images/5user/u_back@2x.png"></image></view>
+          </view>
+
+          <view class='inputs_big_o flexba'>
+            <view>
+              <view class='inputs_indiv'>联系电话</view>
+            </view>
+            <input maxlength="20" name="teacherAge" value="13863685792" />
+          </view>  
+          
+          <view class='inputs_r'>请在下面上传的你的二维码</view>
+          <view class='input_w'>
+            <image src="/images/5user/add_pic@2x.png" style="width: 160rpx; height: 160rpx;"></image>
+          </view>
+          <view class='inputs_border'>
+              这里您可以写下你的个人介绍哦~
+          </view>
+        </view>
+        <!-- 提交按钮 -->
+        <!-- <view class='bt-fixed'> -->
+        <button class='teamwork-btn flexca' formType="submit">
+          <text>保存</text>
+        </button>
+        <!-- </view> -->
+      </view>
+    </form>
+  </view>
+</view>
+<!-- 地址 -->
+<view class="animation-element-wrapper animation-element-addr" animation="{{animation}}" style="visibility:{{!show ? 'visible':'hidden'}}" bindtap="hiddenFloatView" data-id="addr">
+  <view class="animation-element">
+    <text class="left-bt" catchtap="hiddenFloatView" data-id="555">取消</text>
+    <text class="right-bt" catchtap="hiddenFloatView" data-id="666">确定</text>
+    <view class="line"></view>
+
+    <picker-view indicator-style="height: 50rpx;" indicator-class="ccc" value="{{value}}" bindchange="bindChange">
+      <!--省-->
+      <picker-view-column>
+        <view wx:for="{{provinces}}" wx:for-item="sheng" wx:key="">
+          {{sheng.name}}
+        </view>
+      </picker-view-column>
+      <!--地级市-->
+      <picker-view-column>
+        <view wx:for="{{citys}}" wx:key="">
+          {{item.name}}
+        </view>
+      </picker-view-column>
+      <!--区县-->
+      <picker-view-column>
+        <view wx:for="{{countys}}" wx:key="">
+          {{item.name}}
+        </view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>
+<!-- 分界线-->
+<view class="animation-element-wrapper" animation="{{animationN}}" style="visibility:{{showN ? 'hidden':'visible'}}" bindtap="hiddenFloatViewN">
+  <view class="animation-element">
+    <text class="left-bt" catchtap="hiddenFloatViewN" data-id="a1">取消</text>
+    <text class="right-bt" catchtap="hiddenFloatViewN" data-id="a2">确定</text>
+    <view class="line"></view>
+    <picker-view indicator-style="height: 50rpx;" indicator-class="ccc" value="{{valueN}}" bindchange="pickerChangeN">
+      <!--年-->
+      <picker-view-column style="margin: 0 200rpx;">
+        <view wx:for="{{perHaveN}}" wx:key="perHaveN">
+          {{item}}
+        </view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>
+<!-- 日期 -->
+<view class="animation-element-wrapper" animation="{{animationd}}" style="visibility:{{showd ? 'hidden':'visible'}}" bindtap="hiddenFloatViewDate" data-id="date">
+  <view class="animation-element">
+    <text class="left-bt" catchtap="hiddenFloatViewDate" data-id="777">取消</text>
+    <text class="right-bt" catchtap="hiddenFloatViewDate" data-id="888">确定</text>
+    <view class="line"></view>
+    <picker-view indicator-style="height: 50rpx;" indicator-class="ccc" value="{{picker_value}}" bindchange="pickerChangeDate">
+      <!--年-->
+      <picker-view-column>
+        <view wx:for="{{picker_year}}" wx:for-item="onlyyear" wx:key="year1">
+          {{onlyyear}}
+        </view>
+      </picker-view-column>
+      <!--月-->
+      <picker-view-column>
+        <view wx:for="{{picker_month}}" wx:for-item="onlymonth" wx:key="month1">
+          {{onlymonth}}
+        </view>
+      </picker-view-column>
+      <!--日-->
+      <picker-view-column>
+        <view wx:for="{{picker_days}}" wx:for-item="onlyday" wx:key="day1">
+          {{onlyday}}
+        </view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>

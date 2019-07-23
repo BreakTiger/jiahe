@@ -1,0 +1,140 @@
+page{
+  background-color: #fff;
+}
+.detail-content{
+  margin-bottom: 100rpx;
+}
+/* 1上半部分 --------------*/
+/* 1.1头部 */
+.detail-top{
+   padding-bottom: 20rpx;
+   background-color: #f7f7f7;
+}
+.top-header{
+ 
+  background-color: #f7f7f7;
+}
+.header-box{
+  padding: 40rpx 24rpx;
+  background-color: #fff;
+}
+.box-lf{
+  width: 500rpx;
+}
+.box-lf>view{
+ width: 110rpx;
+ height: 110rpx;
+ border-radius: 10rpx;
+}
+/* 1.2轮播 */
+/* 轮播 */
+
+.banner-box {
+  /* position: relative; */
+  background-color: #fff;
+  height: 600rpx;
+   /* border-bottom-left-radius: 20%;  */
+   /* border-bottom-right-radius: 20%;  */
+  overflow: hidden;
+}
+
+
+.home-banner {
+  width: 100%;
+  height:600rpx;
+}
+
+.home-banner image {
+  width: 100%;
+  height: 100%;
+}
+.home-banner .wx-swiper-dot{
+  /* display: none; */
+  width: 20px;
+  height: 3px;
+  border-radius: 0;
+}
+/* 1.3列表 */
+.top-list{
+  padding: 30rpx 24rpx 20rpx;
+  background-color: #fff;
+}
+.top-list .detail-color-item{
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+  color: #333;
+  border-radius: 8rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: rgba(225,243,255,1);
+}
+.top-list .detail-color .clactive{
+  color: #fff;
+  background-color: #839aaf;
+}
+.list-title{
+  margin-bottom: 40rpx;
+  
+}
+/* 2下半部分-------------- */
+.detail-bottom{
+  background-color: #fff;
+}
+.co-img-title{
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  color: #666666;
+  padding-left: 24rpx;
+  border-bottom: 1rpx solid #F9FAFC;
+}
+.co-img-title text:first-child{
+  width: 6rpx;
+  height: 20rpx;
+  background-color: #14a1fd;
+  margin-right: 20rpx;
+  border-radius: 4rpx;
+}
+.co-img-title text:last-child{
+  line-height: 72rpx;
+  font-size: 26rpx;
+  color: #333;
+}
+  /* 2，图片,详情1 */
+  .show-content{
+    padding: 20rpx 24rpx 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-bottom:40rpx; 
+  }
+.show-content .content-pic{
+  width: 100%;
+  margin-top: 25rpx;
+}
+.show-content .content-text{
+  margin-top: 25rpx;
+  color: #666;
+  font-size: 24rpx;
+  line-height: 36rpx;
+}
+.show-content .content-text:first-child{
+  margin-top: 0;
+}
+.bf000{
+  height: 100rpx;
+  background-color: #14a1fd;
+  padding-top: 1rpx;
+}
+.bf000>view{
+  width: 50%;
+  height: 100%;
+}
+.bf-l{
+  background-color: #fff;
+  color: #14a1fd;
+}
+.bf-r{
+  color: #fff;
+}
+
+

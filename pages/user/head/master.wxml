@@ -1,0 +1,190 @@
+<view class="hong-container">
+  <!-- 2表单填写 -->
+  <view class='hong-contant'>
+    <form bindsubmit="teformSubmit">
+      <view class='contant-teamwork clear'>
+        <view class='teamwork-inputs'>
+      <!-- 学校名称--------------------- -->
+          <view class='inputs-box flexba'>
+            <view>
+              <text>学校名称</text>
+            </view>
+            <input maxlength="20" name="schoolname" placeholder='请输入学校名称' value="{{user.schoolname!=null?user.schoolname:''}}" />
+          </view>
+        <!-- 学校校长----------------------------------- -->
+          <view class='inputs-box flexba'>
+            <view>
+              <text>学校校长</text>
+            </view>
+            <input maxlength="20" name="principalname" placeholder='请输入校长名称' value="{{user.principalname}}" />
+          </view>
+      <!-- 学校类型------------------------------- -->
+          <view class='inputs-box flexba' >
+            <view>
+              <text>学校类型</text>
+            </view>
+            <view class='flexa inputext'>
+              <view class="section">
+                <picker bindchange="goclassChange" value="{{classIndex}}" range="{{classArray}}">
+                  <view class="picker">
+                        {{classArray[classIndex]}}
+                  </view>
+                
+                </picker> 
+                </view>
+              <image src='../../../imgs/user/right.png'></image>
+                 <input style='display:none' maxlength="100" name="schooltype" value="{{classArray[classIndex]}}" />
+             </view>
+          </view>
+          <!-- 成立时间------------------------------ -->
+          <view class='inputs-box flexba' bindtap="translateDate">
+            <view>
+              <text>成立时间</text>
+            </view>
+            <view class='flexa inputext'>
+             <view class="section">
+              <picker mode="date"  bindchange="bindDateChange"  value="{{date}}" start="1999-09-01" end="2088-09-01" >  
+              <view class="picker">
+               {{date}}
+                </view>
+              </picker>
+            </view>
+              <image src='../../../imgs/user/right.png'></image>
+                  <input style='display:none' maxlength="100" name="establish" placeholder='请输入建校时间' value="{{date}}" />
+            </view>
+          </view>
+   <!-- 主要课程---------------------------- -->
+           <view class='inputs-box flexba'>
+            <view>
+              <text>主要课程</text>
+            </view>
+            <input maxlength="20" name="session" placeholder='请输入您的主要课程' value="{{user.session!=null?user.session:''}}" />
+          </view>
+      <!-- 学校人数-------------------------- -->
+          <view class='inputs-box flexba' bindtap="translateDate">
+            <view>
+              <text>学校人数</text>
+            </view>
+            <view class='flexa inputext'>
+            <view class="section">
+                <picker bindchange="goStudentChange" value="{{studentIndex}}" range="{{studentArray}}">
+                  <view class="picker">
+                    {{studentArray[studentIndex]}}
+                  </view>
+                </picker>
+              </view>         
+              <image src='../../../imgs/user/right.png'></image>
+              <input style='display:none' maxlength="100" name="studentnum" value="{{studentArray[studentIndex]}}" />
+             </view>
+          </view>
+      <!-- 场地面积---------------------- -->
+         <view class='inputs-box flexba'>
+            <view>
+              <text>场地面积</text>
+            </view>
+            <input maxlength="20" name="area" placeholder='请输入你的场地面积' value="{{user.area!=null?user.area:''}}" />
+          </view>
+      <!-- 有无分校---------------------------------------------- -->
+            <view class='inputs-box flexba' bindtap="translateDate">
+            <view>
+              <text>有无分校</text>
+            </view>
+            <view class='flexa inputext'>
+              <view class="section">
+                  <picker bindchange="goSchoolChange" value="{{schoolIndex}}" range="{{schoolArray}}">
+                    <view class="picker">
+                      {{schoolArray[schoolIndex]}}
+                    </view>
+                  </picker>
+                </view>
+              <image src='../../../imgs/user/right.png'></image>
+               <input style='display:none' maxlength="100" name="branch" value="{{schoolArray[schoolIndex]}}" />
+             </view> 
+          </view>
+    <!-- 是否考编---------------------------------------- -->
+          <view class='inputs-box flexba' bindtap="translateDate">
+            <view>
+              <text>可否考编</text>
+            </view>
+            <view class='flexa inputext'>
+            <view class="section">
+                <picker bindchange="goEditorChange" value="{{editorIndex}}" range="{{editorArray}}">
+                  <view class="picker">
+                      {{editorArray[editorIndex]}}
+                  </view>
+                </picker>
+              </view>
+
+              <image src='../../../imgs/user/right.png'></image>
+              <input style='display:none' maxlength="100" name="Kaobian" value="{{editorArray[editorIndex]}}" />
+             </view>
+          </view>
+        <!-- 经营区域------------------------------------- -->
+          <view class='inputs-box flexba' bindtap="translateDate">
+            <view>
+              <text>经营区域</text>
+            </view>
+            <view class='flexa inputext'>
+              <view class="section">
+                <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                  <view wx:if='{{region}}' class="picker">
+                      {{region}}
+                  </view>
+                  <view wx:else>
+                      {{myaddress[0]}}-{{myaddress[1]}}-{{myaddress[2]}}
+                  </view>
+                </picker>
+              </view>
+              <image src='../../../imgs/user/right.png'></image>
+              <input style='display:none' maxlength="100" name="address" value="{{region[0]}}-{{region[1]}}-{{region[2]}}" />
+             </view>
+          </view>
+   <!-- 注册地址------------------------------- -->
+          <view class='inputs-box flexba' bindtap="translateDate">
+            <view>
+              <text>注册地址</text>
+            </view>
+            <view class='flexa inputext'>
+              <input maxlength="100" name="zcaddress" placeholder='请输入你的注册地址' value="{{user.zcaddress!=null?user.zcaddress:''}}" />
+             </view>
+          </view>
+      <!-- 上传二维码------------------------------- -->
+           <view class='inputs_o'>
+              <view>
+                <text>请在下面上传您的微信二维码图片</text>
+              </view>
+          </view>
+          <view class='inputs_i' bindtap="selectImg">
+              <view class='i-img' wx:if="{{mycode}}" mode='widthFix'>
+                <image src="{{mycode}}"></image>
+              </view>
+              <view class='i-img' wx:else>
+                  <image src="/images/5user/add_pic@2x.png"></image>
+              </view>  
+          </view>
+        <!-- 学校介绍-------------------------------- -->
+          <view class='content-textrea'>
+            <view class='item-box'>
+              <textarea placeholder='这里您可以写下学校介绍哦' name="introduce" value="{{user.introduce!=null?user.introduce:''}}"></textarea>
+            </view>
+          </view>
+          <!-- 最新考编信息-------------------------------- -->
+          <view class='content-textrea'>
+            <view class='item-box'>
+              <textarea placeholder='最新考编信息(选填)' name="kaobiandt" value="{{user.kaobiandt!=null?user.kaobiandt:''}}"></textarea>
+            </view>
+          </view>
+        </view>
+     <!-- 提交按钮 -->
+        <view class='bt-fixed'>
+          <button class='teamwork-btn flexca' formType="submit">
+            <text>保存</text>
+          </button>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>
+
+
+

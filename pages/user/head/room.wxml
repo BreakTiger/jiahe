@@ -1,0 +1,107 @@
+<view class="hong-container">
+
+  <!-- 2表单填写 -->
+  <view class='hong-contant'>
+    <form bindsubmit="teformSubmit">
+      <view class='contant-teamwork clear'>
+        <view class='teamwork-inputs'>
+          <view class='inputs-box flexba'>
+            <view>
+              <text>教室名称</text>
+            </view>
+            <input maxlength="20" name="roomname" placeholder='文化课教室、跆拳道教室等'  value="{{roomname}}"/>
+          </view>
+          <view class='inputs-box flexba' data-cheid='1'>
+            <view>
+              <text>教室地点</text>
+            </view>
+            <view class='flexa inputext'>
+                    <view class="section">
+              <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                <view class="picker">
+                  {{region[0]}}-{{region[1]}}-{{region[2]}}
+                </view>
+              </picker>
+            </view>
+              <image src='../../../imgs/user/right.png'></image>
+              <input style='display:none' name="address" value="{{region[0]}}-{{region[1]}}-{{region[2]}}"  />
+            </view>
+          </view>
+          <view class='inputs-box flexba'>
+            <view>
+              <text>租用价格</text>
+            </view>
+            <input maxlength="15" type='number' name="price" placeholder='请输入租用价格元/小时' value="" />
+          </view>
+          <view class='content-list'>
+            <view class='f24 acl9'>添加标签丰富信息,出租更快捷</view>
+            <view class='top-list'>
+              <view class='detail-color flexw'>
+                 <view>
+          <checkbox-group name="roomlabel" class="check">
+          <label bindtap='onclicks' wx:for="{{label}}" wx:key="{{label}}" wx:for-index="index" data-index="{{index}}" class='{{!item.status?"is_checked":""}}'>
+            <checkbox value="{{item.labelname}}" data-val="{{item.labelname}}" hidden='false' checked='{{item.status}}' /> {{item.labelname}}
+          </label>
+            <!-- <input style='display:none' maxlength="20" name="roomlabel"  value="" /> -->
+        </checkbox-group>
+        </view> 
+
+              </view>
+            </view>
+          </view>
+          <view class='content-textrea'>
+            <view class='item-box'>
+              <textarea  placeholder='这里您可以写下教室的文字描述' name="introduce" value="{{introduce}}"></textarea>
+            </view>
+          </view>
+        </view>
+        <!-- 图片1 -->
+        <view class='up-pic'>
+          <view class='pic-title f28'>请在下面上传教室轮播图片
+            <text class='f22 acl9'>*(最多四张)</text> </view>
+          <view class='flex pic-box'>
+            <block wx:key="imgbox" wx:for="{{imgbox}}">
+              <view class='ap-box'>
+                <view class='add-pic'>
+                  <image class='image-full' src='{{item}}'></image>
+                  <view class='img-de' data-deindex='{{index}}' bindtap='imgDelete1'>
+                    <image class='image-full' src='../../../imgs/index/hmwk_del.png'></image>
+                  </view>
+                </view>
+              </view>
+            </block>
+            <view class='add-pic' bindtap='addPic1' wx:if="{{imgbox.length<4}}">
+              <image class='image-full' src='../../../imgs/index/hmwk_picadd.png'></image>
+            </view>
+          </view>
+        </view>
+        <!-- 图片2 -->
+        <view class='up-pic'>
+          <view class='pic-title f28'>请在下面上传教室的详细图片
+            <text class='f22 acl9'>(*最多四张)</text> </view>
+          <view class='flex pic-box'>
+            <block wx:key="imgbox2" wx:for="{{imgbox2}}">
+              <view class='ap-box'>
+                <view class='add-pic'>
+                  <image class='image-full' src='{{item}}'></image>
+                  <view class='img-de' data-deindex='{{index}}' bindtap='imgDelete2'>
+                    <image class='image-full' src='../../../imgs/index/hmwk_del.png'></image>
+                  </view>
+                </view>
+              </view>
+            </block>
+            <view class='add-pic' bindtap='addPic2' wx:if="{{imgbox2.length<4}}">
+              <image class='image-full' src='../../../imgs/index/hmwk_picadd.png'></image>
+            </view>
+          </view>
+        </view>
+        <!-- 提交按钮 -->
+        <view >
+          <button class='teamwork-btn flexca' formType="submit">
+            <text>发布</text>
+          </button>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>

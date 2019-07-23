@@ -1,0 +1,97 @@
+<view class='detail-container'>
+  <!-- 头部 -->
+  <view class='dc-header '>
+    <view class='header-box  clear'>
+      <view class='hb-l'>
+         <image mode='widthFix' class='img-w' src='{{imgUrl}}{{detail.url}}'></image>
+      </view>
+      <view class='hb-m'>
+        <view class='flex'>
+           <text class='f32'>{{detail.name}}</text> 
+          <view  wx:if="{{detail.sex==1?true:''}}" class='sex'>
+            <image mode='widthFix' class='img-w' src='../../../imgs/index/sex1.png'></image>
+          </view>
+          <view wx:if="{{detail.sex==2?true:''}}" class='sex'>
+            <image mode='widthFix' class='img-w' src='../../../imgs/index/sex2.png'></image>
+          </view>
+        </view>
+        <view class='hb-3'>
+          <view class='flexa f24'>
+            <view>
+              <image mode='widthFix' class='img-w' src='../../../imgs/index/age.png'></image>
+            </view>
+              <text>{{toDay-detail.year }}</text>  
+          </view>
+           <view class='flexa f24'>
+            <view>
+              <image mode='widthFix' class='img-w' src='../../../imgs/index/teach2.png'></image>
+            </view>
+             <text>{{detail.schoolage}}年</text> 
+          </view>
+           <view class='flexa f24'>
+            <view>
+              <image mode='widthFix' class='img-w' src='../../../imgs/index/teach3.png'></image>
+            </view>
+            <text>{{detail.education}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='hb-r f26'><text>[ {{detail.occustate}} ]</text></view>
+    </view>
+  </view>
+  <view class='tiao'></view>
+  <!-- 中部 -->
+  <view class='dc-mess'>
+    <view class='mess-title flexa'>
+      <view>
+        <image class='image-full' src='../../../imgs/index/course.png'></image>
+      </view>
+      <text class='f32'>授课信息</text>
+    </view>
+    <view class='mess-content'>
+      <view class='content-hang f30 clear'>
+        <text>擅长科目</text>
+        <view>
+         <text class='acl9'>{{detail.subject}}</text>
+        </view>
+      </view>
+       <view class='content-hang f30 clear '>
+        <text>授课区域</text>
+        <view>
+         <text class='acl9'>{{detail.dizhi}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+   <view class='tiao'></view>
+  <!-- 底部 -->
+  <view class='dc-mess'>
+    <view class='mess-title flexa'>
+      <view>
+        <image class='image-full' src='../../../imgs/index/dsc.png'></image>
+      </view>
+      <text class='f32'>个人信息</text>
+    </view>
+    <view class='mess-content'>
+      <view class='content-hang f30 clear'>
+        <text>毕业院校</text>
+        <view>
+         <text class='acl9'>{{detail.academy}}</text>
+        </view>
+      </view>
+       <view class='content-hang f30 clear '>
+        <text>所修专业</text>
+        <view>
+         <text class='acl9'>{{detail.major}}</text>
+        </view>
+      </view>
+       <view class='content-hang f30 clear '>
+        <text>个人简介</text>
+        <view>
+         <text class='acl9'>{{detail.introduce}}</text>
+        </view>
+      </view>
+    </view>
+    
+  </view>
+</view>

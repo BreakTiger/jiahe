@@ -1,0 +1,98 @@
+<view class='newjob-container'>
+  <!-- 表单提交 -->
+   <form  bindsubmit="formRoom">
+      <!-- 教室名称 -->
+       <view class='inputs-box flexba'>
+            <view class='input-text'>
+              <text>教室名称</text>
+            </view>
+            <input class="inputsty" maxlength="20" name="itemname" placeholder='请输入教室名称' value="{{itemname}}" />
+          </view>
+        <!-- 位置选择 -->
+            <!-- 工作地点 -->
+       <view class='inputs-box flexba'>
+            <view class='input-text'>
+              <text>工作地点</text>
+            </view>
+            <view class='flexa inputext'>
+            <view class="section">
+              <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                <view class="picker">
+                  {{region[0]}}-{{region[1]}}-{{region[2]}}
+                </view>
+              </picker>
+            </view>
+            <image src="/images/5user/u_back@2x.png" class="flexa-img" ></image>
+           <!-- <input style='display:none' maxlength="20" name="address" placeholder='请输入地址' value=" {{region}}" /> -->
+            <input style='display:none' maxlength="20" name="address" placeholder='请输入地址' value="{{region[0]}}-{{region[1]}}-{{region[2]}}" />
+          </view>
+     </view>
+      <!-- 租用价格 -->
+       <view class='inputs-box flexba'>
+        <view class='input-text'>
+              <text>租用价格</text>
+            </view>
+            <input maxlength="20" name="price" placeholder='元/小时' value="" />
+        </view>
+
+ <view class="section section_gap">
+         <view class="section__title">添加标签丰富信息，出租更快捷</view> 
+          <view>
+          <checkbox-group name="roomlabel" class="check">
+          <label bindtap='onclicks' wx:for="{{label}}" wx:key="{{label}}" wx:for-index="index" data-index="{{index}}" class='{{!item.status?"is_checked":""}}'>
+            <checkbox value="{{item.labelname}}" data-val="{{item.labelname}}" hidden='false' checked='{{item.status}}' /> {{item.labelname}}
+          </label>
+            <!-- <input style='display:none' maxlength="20" name="roomlabel"  value="" /> -->
+        </checkbox-group>
+        </view> 
+
+      </view>
+    
+       <!-- 建议填写岗位职责  -->
+       <view class='content-textrea'>
+            <view class='item-box'>
+              <textarea placeholder='这里您可以写下教室的文字描述' name="introduce" value="{{introduce}}"></textarea>
+            </view>
+          </view>
+      <!-- 教室轮播图 -->
+    <view class='new-banner'>请在下面上传教室轮播图片 <text>*(最多4张)</text></view>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <view wx:if="{{user.sliderimage}}">
+        <view class='bannerimg' bindtap="classroomImg">
+            <image src="{{user.sliderimage}}" mode='widthFix'></image>
+        </view>
+    </view> 
+        <view wx:else="">
+        <view class='bannerimg' bindtap="classroomImg">
+            <image src="/images/5user/add_pic@2x.png"></image>
+        </view>
+    </view> 
+    <view class='new-banner'> 请在下面上传教室细节图片 <text>*(最多4张)</text></view>
+    <view wx:if="{{user.detailimage}}">
+        <view class='bannerimg' bindtap="detailsImg">
+            <image src="{{user.detailimage}}"></image>
+        </view>
+    </view> 
+    <view wx:else="">
+        <view class='bannerimg' bindtap="detailsImg">
+            <image src="/images/5user/add_pic@2x.png"></image>
+        </view>
+    </view> 
+  <button class='bf-btn'  formType="submit">
+    发布
+</button>
+ 
+   </form>
+</view>

@@ -1,0 +1,37 @@
+<view class='compiling_container'>
+  <!-- 考编信息图片名字 -->
+    <view class='compiling_head'>
+        <view class='head_img'>
+             <image src="/images/tab/tab_n_1.png"></image>
+        </view>
+        <view class='head_txt'>
+              <text>李新安</text>
+              <text>•</text>
+              <text>嘉禾英语教育中心</text>
+        </view>
+
+        <!-- 立即沟通按钮 -->
+        <view class='head_btn'>
+            立即沟通
+        </view>
+    </view>
+
+    <!-- 下划线分割线 -->
+    <view class='compiling_underline'></view>
+
+    <!-- 最新考编信息 -->
+    <view class='new_compiling'>
+        <view class='new_img'>
+            <image src="/images/1teacher/h_icon6@2x.png"></image>
+        </view>
+        <text class='new_txt'>最近考编信息</text>
+    </view>
+
+    <!-- 考编内容框 -->
+    <view class='compiling_content'>
+          <view class='content_'>
+            2018年浙江杭州市江干区招事业编制教师568人，报名时间： 2018年1月5日上午9:00 到3月10日下午17:00。
+          </view> 
+    </view>
+
+</view>

@@ -1,0 +1,119 @@
+/* 代课老师 */
+.job_title{
+  display: flex;
+  margin-top: 40rpx;
+  margin-left: 24rpx;
+}
+.job_title_name{
+  font-weight: bold;
+}
+.job_title_txt{
+  position:absolute;
+  right:35rpx;
+  width:150rpx;
+  border:1px solid #ff4a4a;
+  border-radius:6px;
+  text-align:center;
+  font-size:27rpx;
+  color:#ff4a4a;
+  line-height:45rpx;
+}
+
+/* 地区、时间、学历 */
+.job_three{
+  display: flex;
+  margin-top: 10rpx;
+}
+.job_three image{
+  margin-left: 22rpx;
+  width: 45rpx;
+  height: 35rpx;
+}
+.job_three_txt{
+  margin-left: 20rpx;
+  color: #666666;
+  font-size: 24rpx;
+}
+/* 岗位职责 */
+.job_four{
+  display: flex;
+  width: 100%;
+  margin-top: 24rpx;
+}
+.job_four image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 24rpx;
+
+}
+.job_four_txt{
+  color:#333333;
+  font-size:28rpx;
+  margin-left:30rpx;
+  line-height:53rpx;
+}
+.job_four_commun{
+  border:1rpx solid #14a1fd;
+  width:132rpx;
+  height:48rpx;
+  border-radius:8rpx;
+  background:#14a1fd;
+  color:#ffffff;
+  font-size:27rpx;
+  text-align:center;
+  line-height:42rpx;
+  margin-top:10rpx;
+  position:absolute;
+  right:35rpx;
+}
+
+/* 下划线 */
+.job_underline{
+  width: 100%;
+  height: 20rpx;
+  background: #f7f7f7;
+  margin-top: 30rpx;
+}
+.job_described {
+  margin-top: 40rpx;
+  margin-left: 24rpx;
+}
+.job_described image{
+  margin-top: 10rpx;
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 8rpx;
+}
+.job_described_txt{
+  margin-left: 20rpx;
+  color: #333333;
+  font-size: 32rpx;
+}
+/* 岗位要求 */
+.duty{
+  margin-top: 30rpx;
+}
+.duty_content{
+  margin-left: 20rpx;
+}
+.duty_title{
+  margin-left: 20rpx;
+  font-size: 33rpx;
+}
+.duty_content_list{
+  color:#666666;
+  font-size:28rpx;
+  line-height:44rpx;
+  height:auto;
+  margin-top:15rpx;
+  max-width:702rpx;
+  min-width:200rpx;
+  word-wrap:break-word;
+}
+/*发送简历按钮*/
+.btn{
+  width: 100%;
+  margin: 0 auto;
+  height: 120rpx;
+  margin-left:150rpx;
+}

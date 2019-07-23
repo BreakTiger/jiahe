@@ -1,0 +1,301 @@
+page{
+  background-color: #fff;
+}
+/* 1轮播部分 **********/
+.banner-box {
+  /* position: relative; */
+  background-color: #fff;
+  height: 300rpx;
+  /* border-bottom-left-radius: 20%; 
+   border-bottom-right-radius: 20%;  */
+  overflow: hidden;
+}
+
+.home-banner {
+  width: 100%;
+  height: 300rpx;
+}
+
+.home-banner image {
+  width: 100%;
+  height: 100%;
+}
+.nav_underline{
+  background:#14a1fd;
+  width:65rpx;
+  height:6rpx;
+  margin-top:22rpx;
+  margin-left:81rpx;
+  border-radius: 8rpx;
+}
+/*nav 导航***********/
+.nav{
+  width:100%;
+  height:100rpx;
+  display:flex;
+  flex-direction:row;
+  border-bottom:4rpx solid #f7f7f7;
+}
+.default{
+  margin-top:26rpx;
+  margin-left:37rpx;
+  width:10rpx;
+  color: #666666;
+  flex:1;
+  font-size:32rpx;
+  text-align:center;
+}
+.red{
+  margin-top:26rpx;
+  margin-left:37rpx;
+  width:10rpx;
+  color: #14a1fd;
+  flex:1;
+  font-size:32rpx;
+  text-align:center;
+}
+.show{
+  display:block;
+}
+.hidden{
+  display:none;
+}
+/*地理坐标*/
+.area-geo{
+  color:#666;
+  font-size: 28rpx;
+  text-align:center;
+  margin-top: 100rpx;
+}
+.nav-geo{
+  flex:1;
+  font-size:32rpx;
+  margin-left:53rpx;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+  width:200rpx;
+  display:flex;
+  color:#14a1fd;
+  align-items: center;
+}
+.geo-left{
+  height: 37rpx;
+  border-left: 4rpx solid #14a1fd;
+}
+.section{
+  width:126rpx;
+  height:auto;
+  margin-left:10px;
+  overflow:hidden;  
+  text-overflow:ellipsis;  
+  white-space:nowrap;
+}
+.nav-geo image{
+  width:30rpx;
+  height:30rpx;
+  margin-left:20rpx;
+}
+.nav_text{
+  margin-left:20rpx;
+  font-size: 32rpx;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+  width: 126rpx;
+  color:#666666;
+  text-align: center;
+  line-height: 42rpx;
+}
+.nav-teacher{
+  margin-left: 30rpx;
+  display: flex;
+  margin-top: 30rpx;
+}
+.teacher-img{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.teacher-img image{
+  width: 100%;
+  height: 100%;
+}
+
+.teacher-name{
+  margin-left:20rpx;
+  font-weight:bold;
+  font-size:36rpx;
+  /* width:165rpx; */
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+  width: 145rpx;
+}
+.teacher-sex{
+  width: 36rpx;
+  height: 36rpx;
+}
+.teacher-sex image{
+  width: 100%;
+  height: 100%;
+}
+.teacher-edu{
+  color:#333;
+  font-size:28rpx;
+  /* position:absolute;
+  right:188rpx; */
+  /* margin-left:40rpx; */
+  position:absolute;
+  right:245rpx;
+}  
+.teacher-time{
+  padding: 0 10rpx 0 10rpx;
+  font-size: 28rpx;
+}
+.teacher-edu .teacher-border{
+  border-left: 2rpx solid #333;
+  padding:0 10rpx 0 2rpx;
+}
+.teacher-region{
+  color:#999999;
+  font-size:28rpx;
+  position:absolute;
+  right:40rpx;
+}
+.teacher-skill{
+  position:relative;
+  top:-75rpx;
+  left:180rpx;
+  color:#999999;
+  font-size:24rpx;
+  display: flex;
+}
+.skill-border{
+  /* width:120rpx;
+  height:50rpx; */
+  margin-top:20rpx;
+  text-align:center;
+  line-height:50rpx;
+  background:#f0f8fe;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  border-radius: 10rpx;
+}
+.skill-border_o{
+  margin-top:20rpx;
+  background:#f0f8fe;
+  margin-left: 20rpx;
+  line-height:50rpx;
+  text-align:center;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  border-radius: 10rpx;
+}
+.teacher-brief{
+  margin-left:32rpx;
+  width:700rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  margin-top: -35rpx;
+}
+.brief{
+  color: #666666;
+  font-size: 28rpx;
+  width: 700rpx;
+  min-height: 50rpx;
+  max-height: 83rpx;
+  word-wrap: break-word;
+  white-space:normal;
+  overflow: hidden;
+}
+/*任职内容***********/
+.index_content{
+  display: flex;
+  width: 100%;
+  margin-top:20rpx;
+  margin-left: 24rpx;
+}
+.li_name{
+  color: #333333;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.li_comm{
+  margin-top: 25rpx;
+  display: flex;
+  font-size: 29rpx;
+  color: #999999;
+}
+.comm_bo{
+  border-left: 1rpx solid #999999;
+  margin-left: 10rpx;
+  height:30rpx;
+  margin-top:6rpx;
+}
+.comm_teacher{
+  margin-left: 10rpx;
+}
+.in_list{
+  width: 500rpx;
+}
+.in_co{
+  margin-top: 20rpx;
+  display: flex;
+}
+.index_img{
+  width: 48rpx;
+  height: 48rpx;
+  border-radius:50%;
+}
+.index_img image{
+  width: 100%;
+  height: 100%;
+}
+.in_txt{
+  color:#333333;
+  font-size:28rpx;
+  margin-left:20rpx;
+  padding-top:4rpx;
+}
+.in_info{
+  width:134rpx;
+  height:40rpx;
+  border:1rpx solid #ff4a4a;
+  border-radius:8rpx;
+  text-align:center;
+  font-size:24rpx;
+  color:#ff4a4a;
+  position:absolute;
+  right:25rpx;
+  margin-top:16rpx;
+}
+.item-interval{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 20rpx;
+  background: #f7f7f7;
+}
+/*--------------------------------------*/
+
+/*客服  */
+
+.card-img {
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  right: 30rpx;
+  bottom: 30rpx;
+}
+
+button::after{
+}
+.buy {
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  right: 30rpx;
+  bottom: 30rpx;
+  opacity: 0;
+}

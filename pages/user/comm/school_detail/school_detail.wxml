@@ -1,0 +1,44 @@
+<view class='intent_container'>
+    <!-- 详情图片 -->
+    <view class='intent_img'>
+        <image src="{{studyData.image}}"></image>
+    </view>
+
+    <!-- 相关信息 -->
+    <view class='intent_title'>
+        <view class='intent_title_box'></view>
+        <text class='intent_title_h'>相关信息</text>
+    </view>
+
+    <!-- 相关内容 -->
+    <view class='intent_content'>
+        <view class='content_left'>学校名称</view>
+        <view class='content_right'>{{studyData.principal.schoolname}}</view>
+    </view>
+    <view class='intent_content_'>
+        <view class='content_left'>成立时间</view>
+        <view class='content_right'>{{studyData.principal.establish}}</view>
+    </view>
+     <view class='intent_content_'>
+        <view class='content_left'>场地面积</view>
+        <view class='content_right'>{{studyData.principal.area}}</view>
+    </view>
+    <view class='intent_content_'>
+        <view class='content_left'>学生人数</view>
+        <view class='content_right'>{{studyData.principal.studentnum}}</view>
+    </view>
+    <view class='intent_content_'>
+        <view class='content_left'>主要课程</view>
+        <view class='content_right'>{{studyData.principal.session}}</view>
+    </view>
+    <view class='intent_content_'>
+        <view class='content_left'>注册地址</view>
+        <view class='content_right'>{{studyData.principal.zcaddress}}</view>
+    </view>
+    <view class='intent_content_'>
+        <view class='content_left'>备注</view>
+        <view class='content_right'>{{studyData.remark}}</view>
+    </view>
+</view>
+
+<view class='hidden'></view>

@@ -1,0 +1,92 @@
+<view class='container'>
+      <view class='detail'>
+            <view class='teacher_img'>
+                 <image class='teacher_img' src="{{teacherData.teacherimage}}"></image>
+            </view>
+                <text class='detail_name'>{{teacherData.teachername}}</text>
+                <view wx:if="{{teacherData.sex=='男'}}" >
+                     <image class='detail_sex' src="/images/1teacher/h_male@2x.png"></image>
+                </view>
+                 <view wx:if="{{teacherData.sex=='女'}}" >
+                     <image class='detail_sex' src="/images/1teacher/h_famale@2x.png"></image>
+                </view>
+              <text class='detail_information'>[ {{teacherData.occustate}} ]</text>
+      </view>
+      <view class='detail_info'>
+            <view class='info'>
+                  <image class='info_img' src="/images/1teacher/h_icon1@2x.png"></image>
+                  <text class='info_txt'>{{teacherData.birthday}}</text>
+            </view>
+            <view class='info'>
+                  <image src="/images/1teacher/h_icon2@2x.png"></image>
+                  <text class='info_txt'>{{teacherData.teacherage}}</text>
+            </view>
+            <view class='info'>
+                  <image src="/images/1teacher/h_icon3@2x.png"></image>
+                  <text class='info_txt'>{{teacherData.education}}</text>
+            </view>
+      </view>
+    <view class='dateil_underline'></view>
+
+    <!-- 授课信息 -->
+    <view class='lecture'>
+        <view class='lecture_title'>
+            <image class='lecture_title_img' src="/images/1teacher/h_icon4@2x.png"></image>
+            <text class='lecture_title_txt'>授课信息</text>
+        </view>
+    </view>
+    <view class='lecture_content'>
+          <text class='lecture_content_teaching'>教学科目</text>
+          <text class='lecture_content_language'>{{teacherData.subject}}</text>
+    </view>
+     <view class='lecture_content'>
+          <text class='lecture_content_teaching'>所在区域</text>
+          <text class='lecture_content_language'>{{teacherData.address}}</text>
+    </view> 
+     <view class='lecture_content'>
+          <text class='lecture_content_teaching'>特色课程</text>
+          <text class='lecture_content_language'>{{teacherData.advantage}}</text>
+    </view>  
+    <view class='lecture_underline'></view>
+
+  <!-- 个人信息 -->
+    <view class='m0-le'>  
+        <view class='lecture'>
+            <view class='lecture_title'>
+                <image class='lecture_title_img' src="/images/1teacher/h_icon5@2x.png"></image>
+                <text class='lecture_title_txt'>个人信息</text>
+            </view>
+              <view class='people_content'>
+                  <view class='people_content_teaching'>毕业院校</view>
+                  <view class='people_content_language'>{{teacherData.academy}}</view>
+            </view> 
+              <view class='people_content'>
+                  <view class='people_content_teaching'>所修专业</view>
+                  <view class='people_content_language'>{{teacherData.major}}</view>
+            </view>  
+              <view class='people_content'>
+                  <view class='people_content_teaching'>考编需求</view>
+                  <view class='people_content_language'>希望报考编制教师</view>
+            </view> 
+              <view class='people_content'>
+                  <view class='people_content_teaching'>个人简介</view>
+                  <view class='people_content_language'>{{teacherData.introduce}}</view>
+            </view>   
+        </view>
+    </view>
+
+</view>
+
+<!-- <view class='add_btn' bindtap='goCommunication'>
+    <button class='btn'>
+        立即沟通
+    </button>
+</view> -->
+
+
+<!-- 发送简历按钮 -->
+<view class='add_btn' bindtap="add_commun" data-id='{{teacherData}}' wx:if="{{user.user_identity!='teaher'}}">
+    <button class='btn'>
+        立即沟通
+    </button>
+</view>

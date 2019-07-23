@@ -1,0 +1,183 @@
+.pubish_img{
+  margin-top: 50rpx;
+  width: 100%;
+  height: 600rpx;
+}
+.pubish_img image{
+  width: 100%;
+  height: 100%;
+}
+.send-mo{
+margin:15rpx auto;
+color:#666666;
+font-size:28rpx;
+text-align:center;
+}
+.nav-teacher{
+  margin-left: 30rpx;
+  display: flex;
+  margin-top: 30rpx;
+}
+.teacherjob{
+  display: flex;
+  width: 100%;
+  height: 80rpx;
+  border-bottom: 2rpx solid #f7f7f7;
+}
+.teacher-job{
+  color: #14a1fd;
+  margin-left:24rpx;
+  margin-top:10rpx;
+  font-size:32rpx;
+}
+.teacher-img{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.teacher-img image{
+  width: 100%;
+  height: 100%;
+}
+
+.teacher-name{
+  margin-left:20rpx;
+  font-weight:bold;
+  font-size:36rpx;
+  /* width:165rpx; */
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+  width: 160rpx;
+}
+.teacher-sex{
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 20rpx;
+}
+.teacher-sex image{
+  width: 100%;
+  height: 100%;
+}
+.teacher-edu{
+  color:#333;
+  font-size:28rpx;
+  /* position:absolute;
+  right:188rpx; */
+  /* margin-left:40rpx; */
+  position:absolute;
+  right:225rpx;
+}  
+.teacher-time{
+  padding: 0 10rpx 0 10rpx;
+  font-size: 28rpx;
+}
+.teacher-edu .teacher-border{
+  border-left: 2rpx solid #333;
+  padding:0 10rpx 0 2rpx;
+}
+.teacher-region{
+  color:#999999;
+  font-size:28rpx;
+  position:absolute;
+  right:40rpx;
+}
+.teacher-skill{
+  position:relative;
+  top:-75rpx;
+  left:180rpx;
+  color:#999999;
+  font-size:24rpx;
+  display: flex;
+}
+.skill-border{
+  /* width:120rpx;
+  height:50rpx; */
+  margin-top:20rpx;
+  text-align:center;
+  line-height:50rpx;
+  background:#f0f8fe;
+}
+.skill-border_o{
+  margin-top:20rpx;
+  background:#f0f8fe;
+  margin-left: 20rpx;
+  line-height:50rpx;
+  text-align:center;
+}
+.teacher-brief{
+  margin-left:32rpx;
+  width:700rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  margin-top: -35rpx;
+}
+.brief{  
+  color:#666666;
+  font-size:28rpx;
+  width:700rpx;
+  min-height:50rpx;
+  max-height:83rpx;
+  word-wrap:break-word;
+  white-space:normal;
+  overflow:hidden;
+}
+
+
+
+
+
+
+
+
+
+
+.mt-item{
+  width: 100%;
+  padding: 30rpx 24rpx 20rpx;
+  background-color: #fff;
+  height: 200rpx;
+  margin-bottom: 20rpx;
+}
+.mt-box{
+  padding-left: 160rpx;
+  position: relative;
+}
+.mt-lf{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 160rpx;
+  height: 100%;
+}
+.mt-lf>view{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background-color: #333;
+}
+.mt-rt{
+  padding-top: 5rpx;
+}
+.mt-rt-box{
+  position: relative;
+}
+.mt-t1{
+  width: 100rpx;
+  margin-right: 20rpx;
+}
+.mt-t2{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 30rpx;
+}
+.mt-t2 image{
+  vertical-align: top;
+}
+.mt-t3a{
+  display: inline-block;
+  margin: 0 15rpx;
+  height: 26rpx;
+  border-left: 2rpx solid #333;
+}

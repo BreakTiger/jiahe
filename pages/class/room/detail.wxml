@@ -1,0 +1,73 @@
+<view class='detail-content'>
+  <!-- 1上半部分 -->
+  <view class='detail-top'>
+    <!-- 1.1头部 -->
+    <view class='top-header'>
+      <view class='header-box flexba'>
+        <view class='box-lf flexa'>
+          <view class='mr20'>
+            <image mode='widthFix' class='img-w' src='{{imgUrl}}{{detail.url}}'></image>
+          </view>
+          <text class='f30'>{{detail.username}}</text>
+        </view>
+        <view class='box-rt acl'>
+          <text class='f22'>￥</text>
+          <text class='f34'>{{detail.price}}/{{detail.month}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 1.2轮播 -->
+    <view class='top-slider'>
+      <!-- 轮播 -->
+      <view class="banner-box">
+        <swiper class="home-banner swiper" indicator-dots="true" autoplay="true" indicator-color="rgba(255,255,255,0.4)" indicator-active-color="rgba(255,255,255,1)" circular='true' interval="3000" duration="1000">
+          <block wx:key="unique" wx:for="{{detail.slider}}" wx:for-index="index">
+            <swiper-item>
+              <!-- <image class="banner-img" src="{{hpImg}}{{item.url}}" class="slide-image" mode="aspectFill" /> -->
+               <image class="banner-img" mode="aspectFill" src='{{imgUrl}}{{item}}'></image> 
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+    <!-- 1.3列表-->
+    <view class='top-list'>
+      <view class='list-title f30 d000'>
+        <text>{{detail.name}}</text>
+      </view>
+      <view class='detail-color flexw'>
+        <block wx:key="haves" wx:for="{{detail.label}}" wx:for-index="index">
+          <view class='detail-color-item flexca'>
+            <text>{{item}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <!-- 2下半部分 -->
+  <view class='detail-bottom'>
+    <view class='co-img-title'>
+      <text></text>
+      <text>其它详情</text>
+    </view>
+    <view>
+
+      <view class='show-content'>
+        <!-- 2，图片,详情 -->
+        <view class='content-text'>
+          <text>{{detail.introduce}}</text>
+        </view>
+        <view class='content-pic'>
+          <block wx:key='details' wx:for='{{detail.details}}'>
+            <image mode='widthFix' class='img-w' src='{{imgUrl}}{{item}}'></image>
+          </block>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>
+<view class='bf000 flex f30' wx:if="{{idcard==1}}">
+  <view class='bf-l flexca' data-daphone='{{detail.phone}}' bindtap='daTel'>联系校长</view>
+  <view class='bf-r flexca' bindtap='rentFn'>立即租它</view>
+</view>

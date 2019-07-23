@@ -1,0 +1,70 @@
+/*需支付*/
+.pay_txt{
+  margin-left: 24rpx;
+  margin-top: 40rpx;
+  color: #333333;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+/*金额*/
+.pay_price{
+  text-align:center;
+  color:#14a1fd;
+  font-size:46rpx;
+  font-weight:bold;
+}
+/*详情*/
+.pay_detail{
+  margin-left: 24rpx;
+  color: #666666;
+  font-size: 28rpx;
+  display: flex;
+  margin-top: 80rpx;
+}
+.pay_detail_txt{
+  color: #14a1fd;
+  font-size: 28rpx;
+}
+button{
+  margin-top: 120rpx;
+  width: 400rpx;
+  border-radius: 50rpx;
+  background: #14a1fd;
+  color: #fff;
+}
+.pay_price text {
+  color:#999;
+  font-size:26rpx;
+}
+
+
+
+.select-only{
+  margin-top:30rpx;
+  margin-left:95rpx;
+}
+.flexa1{
+  display:flex;
+  align-items:center;
+  flex:1;
+  line-height: 110rpx;
+}
+.so-3{
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  border: 1px solid #7C7C7C;
+  margin-right: 20rpx;
+}
+.so-2{
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.select-only .active1{
+  border: 1px solid #14a1fd;
+}
+.select-only  .active2{
+  background-color: #14a1fd;
+}

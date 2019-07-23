@@ -1,0 +1,64 @@
+<view class='publish-container'>
+
+<!-- 没有充值的情况------------------------------------------------------ -->
+      <!-- 没有充值--- 未开通会员-------- -->
+   <!-- <view class='pubish_img' wx:if="{{publist.code == 402002}}"> -->
+      <view class='pubish_img' wx:if="{{publist.code != 200}}">
+      <image src="/images/5user/p_default@2x.png" style="width:100%; height: 650rpx;"></image>
+         <view class='pu-tx'>暂无发布内容哦</view>
+  </view> 
+     <!-- 没有充值  会员已到期------------- 
+      <view class='pubish_img' wx:if="{{publist.code == 503008}}"> 
+      <image src="/images/5user/p_default@2x.png" style="width:100%; height: 650rpx;"></image>
+         <view class='pu-tx'>暂无发布内容哦</view>
+  </view>  -->
+
+
+<!-- 有充值的情况-------------------------------------------------------- -->
+  <!-- <view style="width: 100%;" wx:if="{{publist.code == 200}}" wx:for="{{job}}" wx:key="unique" wx:if="{{item.status == 1}}"> -->
+ <view wx:if="{{publist.code == 200}}"> 
+    <view style="width: 100%;"  wx:for="{{job}}" wx:key="unique" wx:if="{{item.status == 1}}">
+      <view class='publish_close' bindtap='close' wx:if="{{item.status == 1}}" data-id="{{item}}">关闭职位</view>
+      <view bindtap="teach_job" class='pu-0' data-id='{{item}}' >
+          <view class='pubish_title'>
+                <view class='pubish_title_t'>{{item.jobname}}</view>
+                <view class='pubish_title_release' wx:if="{{item.status == 1}}">[ 已发布 ]</view>
+                 <!-- <view class='pubish_title_close' wx:if="{{item.status != 1}}">[ 已关闭 ]</view> -->
+          </view>
+          <view class='pubish_title_p'>
+                <view class='pubish_title_one'>工作地点</view>
+                <view class='pubish_title_b'></view>
+                <view class='pubish_title_two'>经验限制</view>
+                <view class='pubish_title_b'></view>
+                <view class='pubish_title_two'>学历</view>
+          </view>
+      </view>
+    </view>
+  </view>   
+</view> 
+
+
+<!-- 底部按钮 -->
+<view class='bf000 flexca' wx:if="{{publist.code == 503008}}">
+  <view class='bf-btn flexca f30' bindtap='pubfaInto'>
+    <!-- <text>发布新的职位</text> -->
+    <text>发布代课职位</text>
+  </view>
+</view>
+
+<view class='bf000 flexca' wx:if="{{publist.code == 402002}}">
+  <view class='bf-btn flexca f30' bindtap='pubfaInto'>
+    <!-- <text>发布新的职位</text> -->
+    <text>发布代课职位</text>
+  </view>
+</view>
+
+
+<view style='width:100%;height:200rpx;'></view>
+
+<view class='bf000 flexca' wx:if="{{publist.code == 200}}">
+  <view class='bf-btn flexca f30' bindtap='goNewJob'>
+    <!-- <text>发布新的职位</text> -->
+    <text>发布代课职位</text>
+  </view>
+</view>

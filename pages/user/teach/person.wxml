@@ -1,0 +1,176 @@
+<view class="hong-container">
+  <!-- 2表单填写 -->
+  <view class='hong-contant'>
+    <form bindsubmit="teformSubmit">
+      <view class='contant-teamwork clear'>
+        <view class='teamwork-inputs'>
+        <!-- 姓名----------------------------------- -->
+          <view class='inputs-box flexba'>
+            <view>
+              <text>姓名</text>
+            </view>
+            <input maxlength="20" name="teachername" placeholder='请输入您的姓名' value="{{user.teachername!=null?user.teachername:''}}" />
+          </view>
+          <!-- 性别----------------------------------------- -->
+          <view class='inputs-box flexba' data-cheid='1' bindtap='translateN'>
+            <view>
+              <text>性别</text>
+            </view>
+            <view class='flexa inputext'>
+             <!-- <text>{{user.sex}}</text> -->
+            <view class="section">
+                <picker bindchange="schoolSex" value="{{sexIndex}}" range="{{sexArray}}">
+                  <view class="picker">
+                  {{sexArray[sexIndex]}}
+                  </view>
+                </picker>
+              </view>
+              <image src='../../../imgs/user/right.png'></image>
+              <input style='display:none' name="sex" value="{{sexArray[sexIndex]}}" />
+            </view>
+          </view>
+          <!-- 出生日期------------------------------- -->
+          <view class='inputs-box flexba' bindtap="translateDate">
+            <view>
+              <text>出生日期</text>
+            </view>
+            <view class='flexa inputext'>
+              <view class="section">
+                <picker mode="date" value="{{date}}" start="1700-09-01" end="2017-09-01" bindchange="bindDateChange">
+                  <view class="picker">
+                         {{date}}
+                  </view>
+                </picker>
+              </view>
+            <image src='../../../imgs/user/right.png'></image>
+              <input style='display:none' maxlength="100" name="birthday" placeholder='请输入出生日期' value="{{user.birthday!=null?user.birthday:date}}" />
+            </view>
+          </view>
+          <!-- 求职状态---------------------- -->
+          <view class='inputs-box flexba' data-cheid='2' bindtap='translateN'>
+            <view>
+              <text>求职状态</text>
+            </view>
+            <view class='flexa inputext'>
+              <view class="section">
+                <picker bindchange="examples" value="{{examplesIndex}}" range="{{examplesArray}}">
+                  <view class="picker">
+                    {{examplesArray[examplesIndex]}}
+                  </view>
+                </picker>
+              </view>
+              <image src='../../../imgs/user/right.png'></image>
+              <input style='display:none' name="occustate" value="{{examplesArray[examplesIndex]}}" />
+            </view>
+          </view>
+          <!-- 教龄------------ -->
+          <view class='inputs-box flexba'>
+            <view>
+              <text>教龄</text>
+            </view>
+            <!-- <text>{{user.teacherage}}</text> -->
+            <input maxlength="8" name="teacherage"  placeholder='请输入您的教龄例如：3年' value="{{user.teacherage!=null?user.teacherage:''}}" />
+          </view>
+          <!-- 学历----------------------------------- -->
+          <view class='inputs-box flexba' data-cheid='3' bindtap='translateN'>
+            <view>
+              <text>学历</text>
+            </view>
+            <view class='flexa inputext'>
+                <view class="section">
+                    <picker bindchange="college" value="{{collegeIndex}}" range="{{collegeArray}}">
+                      <view class="picker">
+                        {{collegeArray[collegeIndex]}}
+                      </view>
+                    </picker>
+                  </view>
+              <image src='../../../imgs/user/right.png'></image>
+              <input style='display:none' name="education" value="{{user.education!=null?user.education:collegeArray[collegeIndex]}}" />
+            </view>
+          </view>
+          <!-- 擅长科目-------------------- -->
+          <view class='inputs-box flexba'>
+            <view>
+              <text>擅长科目</text>
+            </view>
+            <input maxlength="20" name="subject" placeholder='请输入您擅长的科目' value="{{user.subject!=null?user.subject:''}}" />
+          </view>
+          <!-- 所在区域--------------------- -->
+          <view class='inputs-box flexba' bindtap="translate">
+            <view>
+              <text>所在区域</text>
+            </view>
+            <view class='flexa inputext'>
+               <view class="section">
+                <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                  <view wx:if='{{region}}' class="picker">
+                      {{region}}
+                  </view>
+                  <view wx:else>
+                      {{myaddress[0]}}-{{myaddress[1]}}-{{myaddress[2]}}
+                  </view>
+                </picker>
+              </view>
+              <image src='../../../imgs/user/right.png'></image>
+              <input style='display:none' name="address" value="{{region[0]}}-{{region[1]}}-{{region[2]}}" />
+            </view>
+          </view>
+      <!-- 特色社团课----------------------- -->
+          <view class='inputs-box flexba'>
+            <view>
+              <text>特色社团课</text>
+            </view>
+            <input maxlength="30" name="advantage" placeholder='填写例如：针灸、健美操等' value="{{user.advantage!=null?user.advantage:''}}" />
+          </view>
+
+        <!-- 毕业院校----------------------- -->
+           <view class='inputs-box flexba'>
+            <view>
+              <text>毕业院校</text>
+            </view>
+            <input maxlength="30" name="academy" placeholder='请输入毕业院校' value="{{user.academy!=null?user.academy:''}}" />
+          </view>
+          <!-- 所修专业------------------------- -->
+          <view class='inputs-box flexba'>
+            <view>
+              <text>所修专业</text>
+            </view>
+            <input maxlength="35" name="major" placeholder='请输入所修专业' value="{{user.major!=null?user.major:''}}" />
+          </view>
+        <!-- 编制教师报考-------------------------- -->
+          <view class='inputs-box flexba'>
+            <view>
+              <text>是否希望考编</text>
+            </view>
+            <input maxlength="35" name="bianzhi" placeholder='希望报考编制教师 填写如：希望、不希望' value="{{user.bianzhi!=null?user.bianzhi:''}}" />
+          </view>
+        <!-- 上传微信二维码图片-------------------- -->
+          <view class='inputs_text'>
+            请在下面上传您的微信二维码图片
+          </view>
+          <view class='inputs_wx_img' bindtap='gotoShowImg'>
+          <view class='per-img' wx:if="{{mycode}}">
+            <image src="{{mycode}}"></image>
+              
+          </view>
+          <view wx:else class='per-img'>
+            <image src="/images/5user/add_pic@2x.png"></image>
+          </view>
+          </view>
+          <!-- 个人介绍------------------------------------ -->
+          <view class='content-textrea'>
+            <view class='item-box'>
+              <textarea maxlength="150"  placeholder='这里您可以写下您的个人介绍哦' name="introduce" value="{{user.introduce!=null?user.introduce:''}}" ></textarea>
+            </view>
+          </view>
+        </view>
+        <!-- 提交按钮 -->
+       <!-- <view class='bt-fixed'> -->
+          <button class='teamwork-btn flexca' formType="submit">
+          <text>保存</text>
+        </button>
+       <!-- </view> -->
+      </view>
+    </form>
+  </view>
+</view>

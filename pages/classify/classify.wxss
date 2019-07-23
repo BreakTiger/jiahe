@@ -1,0 +1,136 @@
+page {
+	height: 100%;
+  position: relative;
+}
+
+.classify{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* 分类标题选项 */
+.classify-title{
+  height: 88rpx;
+  background-color: white;
+}
+.title-box{
+  width: 240rpx;
+  height: 56rpx;
+  border:1px solid #839aaf;
+  border-radius: 44rpx;
+  overflow: hidden;
+}
+.title-box>view{
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  color: #839aaf;
+  font-size: 30rpx;
+  line-height: 56rpx;
+}
+
+ .title-box .titlective{
+   background-color: #839aaf;
+   color: white;
+   box-shadow: 0 0 1rpx  #839aaf;
+} 
+/* 分类主体内容 */
+.classify-content{
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+.classify-m,.classify-f{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+ .m-f-left{
+  width: 174rpx;
+  height: 100%;
+  background-color: white;
+  overflow: hidden;
+  font-size: 30rpx;
+  color: #333333;
+} 
+.m-f-left .left-item{
+  height: 88rpx; 
+  border-bottom: 1px solid #F7f7f7;
+  border-left: 8rpx solid transparent;
+} 
+.m-f-left>view:first-child{
+  border-top: 1px solid #F7f7f7;
+}
+ .m-f-left .menuctive{
+  background-color: #f7f7f7;
+  border-left:  8rpx solid #839aaf;
+  color: #839aaf;
+ }
+.m-f-right{
+  padding: 10rpx 9rpx 10rpx 9rpx; 
+  width: 576rpx; 
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+   flex-wrap: wrap;  
+  align-content: flex-start;
+  overflow: hidden; 
+     
+}
+.m-f-right-in{
+  box-sizing: border-box;
+  display: flex;
+   flex-wrap: wrap;  
+  align-content: flex-start;
+  overflow: hidden; 
+     
+}
+.shop-box{
+  width:262rpx;
+  height: 410rpx;
+  background-color: white;
+  margin: 20rpx 9rpx 0; 
+  overflow: hidden;
+}
+.shop-img{
+  width: 100%;
+  height: 250rpx;
+}
+.shop-img image{
+  width: 100%;
+  height: 100%;
+}
+.shop-detail{
+  padding:0 20rpx; 
+  overflow: hidden;
+}
+.shop-name{
+  font-size: 26rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  overflow: hidden; 
+}
+.shop-price{
+  font-size: 24rpx; 
+  color: #666666;
+}
+.shop-price text{
+  color: #ff4342;
+  font-size: 30rpx;
+}
+.shop-shop{
+  width: 100rpx;
+  height: 40rpx;
+}
+.shop-shop image{
+  width: 100%;
+  height: 100%;
+}
+.shop-number{
+  font-size: 24rpx;
+  color: #333;
+  margin-top: 10rpx;
+}

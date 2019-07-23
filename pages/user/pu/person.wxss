@@ -1,0 +1,94 @@
+@import 'vip.wxss';
+.inputs-box .inputext{
+    /* font-size:26rpx; */
+    overflow: visible;
+}
+.only-text{
+  font-size: 30rpx;
+}
+.input-person{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.bt-fixed{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* height: 200rpx; */
+}
+.inputs-box input{
+  color: #666666;
+  font-size: 28rpx;
+}
+.inputs_list{
+  /* font-weight: bold; */
+  display: flex;
+  font-size: 32rpx;
+  color: #333333;
+}
+.input_right{
+  margin-left: 10rpx;
+}
+.inputs_big{
+  display: flex;
+  width: 100%;
+  height: 88rpx;
+}
+.inputs_big input{
+  width:350rpx;
+  margin-right:-40rpx;
+  text-align:right;
+  font-size:28rpx;
+  color:#666;
+}
+.inputs_big image{
+  margin-right:20rpx;
+  float:right;
+  margin-left: 3rpx;
+}
+.inputs_indiv{
+  width: 250rpx;
+  font-size: 32rpx;
+  color: #333333;
+  margin-left: 25rpx;
+}
+.inputs_indiv_o{
+  width: 250rpx;
+  font-size: 32rpx;
+  color: #333333;
+  margin-left: 25rpx;
+}
+.inputs_big_o input{
+  width:350rpx;
+  height: 88rpx;
+  margin-right: 20rpx;
+  text-align:right;
+  font-size:28rpx;
+  color:#666;
+}
+.inputs_r{
+  margin-top: 10rpx;
+  font-size: 32rpx;
+  color: #333333;
+  margin-left: 24rpx;
+}
+.input_w{
+  width: 702rpx;
+  margin: 0 auto;
+}
+.input_w image{
+  margin-top: 40rpx;
+  border-radius: 8rpx;
+}
+.inputs_border{
+  width: 702rpx;
+  height: 200rpx;
+  margin: 60rpx auto;
+  background: #f7f7f7;
+  padding: 0 20rpx 0 20rpx;
+  font-size: 30rpx;
+  color: #999999;
+}

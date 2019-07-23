@@ -1,0 +1,46 @@
+
+@import 'vip.wxss';
+page{
+  background-color: #fff;
+}
+.inputs-box .inputext{
+    /* font-size:26rpx; */
+    overflow: visible;
+}
+.only-text{
+  font-size: 30rpx;
+}
+.input-person{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.bt-fixed{
+  /* position: fixed;
+  bottom: 0;
+  left: 0; */
+  width: 100%;
+  /* height: 200rpx; */
+}
+.inputs_o{
+  height:88rpx;
+  padding:20rpx 24rpx;
+  border-bottom:1px solid #F7F7F7;
+  background-color:#ffffff;
+  font-size:30rpx;
+  color:#333333;
+}
+.inputs_i{
+  padding:0 24rpx;
+  margin-bottom:20rpx;
+  margin-top:40rpx;
+}
+.i-img{
+  width: 150rpx;
+  height: 150rpx;
+}
+.i-img image{
+  width: 100%;
+  height: 100%;
+}

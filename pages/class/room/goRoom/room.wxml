@@ -1,0 +1,54 @@
+<view class='room_container'>
+  <!-- 轮播详情图片 -->
+      <view class="banner-box">
+        <swiper class="home-banner swiper" indicator-dots="true" autoplay="true" indicator-color="rgba(255,255,255,0.4)" indicator-active-color="rgba(255,255,255,1)" circular='true' interval="3000" duration="1000">
+          <block wx:key="sliderimage"  wx:for="{{roomData.sliderimage}}" wx:for-index="index">
+            <swiper-item>
+              <image class="banner-img" src="{{item}}" bindtap='clickBanner'data-id="{{item}}" data-banner="{{item}}" data-index="{{index}}" class="slide-image" mode="aspectFill" />
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+
+
+
+
+  <!-- 详情标题 -->
+  <view class='goRoom_title'>
+    <view class='room_title'>{{roomData.roomname}}</view>
+    <view class='room_title_right' wx:if="{{roomData.status == 2 }}" >[ 已出租 ]</view>
+  </view>
+  <view class='goRoom_time'>￥ {{roomData.price}} /小时</view>
+
+  <view class='goRoom_condition'>
+    <view class='condition'>{{roomData.roomlabel}}</view>
+  </view>
+
+
+  <!-- 下划线 -->
+  <view class='goRoom_underline'></view>
+</view>
+
+<!-- 教室详情 -->
+  <view class='mar-bo'>
+    <view class='title_box'>
+      <image style="width: 8rpx; height: 34rpx;margin-top: 8rpx;" src="/images/2classroom/title@2x.png"></image>
+      <text class='title_box_txt'>教室详情</text>
+    </view>
+
+    <view class='content_box'>{{roomData.introduce}}</view>
+
+    <view  class='box_img' wx:for="{{roomData.detailimage}}" wx:key="detailimage"> 
+       <image src="{{item}}"></image>
+    </view>
+  </view>
+  <view class='m0-while'>
+  </view>
+
+
+<!-- 发送简历按钮 -->
+<view class='add_btn' bindtap="roomDetele" data-id='{{roomData}}'>
+    <button class='btn'>
+        修改共享教室
+    </button>
+</view>

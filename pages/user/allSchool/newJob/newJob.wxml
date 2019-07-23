@@ -1,0 +1,77 @@
+<view class='newjob-container'>
+  <!-- 表单提交 -->
+   <form  bindsubmit="formJob">
+      <!-- 职位名称 -->
+       <view class='inputs-box flexba'>
+            <view class='input-text'>
+              <text>职位名称</text>
+            </view>
+            <input class="inputsty" maxlength="20" name="jobname" placeholder='请输入职位名称' value="" />
+          </view>
+      <!-- 工作地点 -->
+       <view class='inputs-box flexba'>
+            <view class='input-text'>
+              <text>工作地点</text>
+            </view>
+            <view class='flexa inputext'>
+            <view class="section">
+              <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                <view class="picker">
+                  {{region[0]}}-{{region[1]}}-{{region[2]}}
+                </view>
+              </picker>
+            </view>
+            <image src="/images/5user/u_back@2x.png" class="flexa-img" ></image>
+           <input style='display:none' maxlength="20" name="address" placeholder='请输入职位名称' value=" {{region[0]}}-{{region[1]}}-{{region[2]}}" />
+          </view>
+     </view>
+        <!-- 教龄要求 -->
+        <view class='inputs-box flexba'>
+            <view class='input-text'>
+              <text>教龄要求</text>
+            </view>
+            <view class='flexa inputext'>
+            <view class="section">
+                <picker bindchange="ageChange" value="{{ageIndex}}" range="{{ageArray}}">
+                  <view class="picker">
+                        {{ageArray[ageIndex]}}
+                  </view>
+                </picker>
+              </view>
+            <image src="/images/5user/u_back@2x.png" class="flexa-img"></image>
+           <input style='display:none' maxlength="20" name="experience" placeholder='请输入教龄' value="{{ageArray[ageIndex]}}" />
+          </view>
+     </view> 
+     <!-- 教龄要求 -->
+        <view class='inputs-box flexba'>
+            <view class='input-text'>
+              <text>学历要求</text>
+            </view>
+            <view class='flexa inputext'>
+              <view class="section">
+                <picker bindchange="eduChange" value="{{eduIndex}}" range="{{eduArray}}">
+                  <view class="picker">
+                        {{eduArray[eduIndex]}}
+                  </view>
+                </picker>
+              </view>
+            <image src="/images/5user/u_back@2x.png"class="flexa-img"></image>
+           <input style='display:none' maxlength="20" name="education" placeholder='请输入学历' value="{{eduArray[eduIndex]}}" />
+          </view>
+     </view>
+       <!-- 建议填写岗位职责  -->
+       <view class='content-textrea'>
+            <view class='item-box'>
+              <textarea placeholder='建议填写岗位职责、岗位要求' name="duty" value=""></textarea>
+            </view>
+          </view>
+<button class='bf-btn'  formType="submit">
+    发布代课职位
+</button>
+
+
+   </form>
+</view>
+
+
+

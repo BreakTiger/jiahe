@@ -1,0 +1,171 @@
+page{
+   background-color: #fff;
+}
+.edition-container{
+  font-size: 30rpx;
+  color: #333;
+  overflow: visible;
+}
+/* 1分类菜单 */
+.edition-menu{
+  height: 88rpx;
+  border-top: 1px solid #f7f7f7;
+  border-bottom: 1px solid #f7f7f7;
+  box-sizing: border-box;
+}
+.edition-menu>view{
+  width: 50%;
+}
+.edition-menu .menu-title{
+  margin-top: 16rpx;
+  color: #333333;
+}
+.edition-menu .menu-under{
+  width: 68rpx;
+  height: 5rpx;
+  background-color:transparent ;
+  border-radius: 6rpx;
+  margin-top: 10rpx;
+}
+.edition-menu .actitle{
+  color:#14a1fd;
+}
+.edition-menu .edactive{
+  background-color: #14a1fd;
+}
+/* 2详情列表  */
+.topimg{
+  width: 100%;
+  height: 400rpx;
+  text-align: center;
+}
+.topimg image{
+  margin-top: 100rpx;
+  width: 240rpx;
+  height: 240rpx;
+}
+.username-box{
+  overflow: visible;
+  /* height: 362rpx; */
+}
+.username{
+  width: 100%;
+  height: 120rpx;
+  border-bottom: 1px solid #eceef3;
+  font-size: 30rpx;
+  position: relative;
+}
+.username image{
+  float: left;
+  height: 18px;
+  width: 18px;
+  margin-right: 20rpx;
+}
+.username input{
+  height: 80rpx;
+}
+.username .get-pwd{
+  font-size: 26rpx;
+  position: relative;
+  z-index: 100;
+}
+.usertext{
+  text-align: right;
+  font-size: 22rpx;
+  color: #999;
+  margin-top: 15rpx;
+}
+.pwd-text-box{
+  width: 190rpx;
+  height: 65rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 15rpx;
+  background-color: #14a1fd;
+  color: #fff;
+  margin-right: 17rpx;
+  font-size: 24rpx;
+}
+.user-code{
+  width:190rpx;
+  height:55rpx;
+  background-color:#14a1fd;
+  line-height:55rpx;
+  border-radius:8rpx;
+  color:#fff;
+  font-size:24rpx;
+  text-align:center;
+}
+.username .active{
+  background-color:#14a1fd;
+}
+.usermotto{
+  line-height: 40rpx;
+   width: 560rpx;
+   /* height: 500rpx;  */
+  margin: 0 auto;
+  position: relative;
+  overflow: visible;
+}
+.useryzm{
+  width: 400rpx;
+  position: relative;
+}
+.useryzm button{
+  position: absolute;
+  top: -80rpx;
+  left: 360rpx;
+  width: 220rpx;
+  font-size: 12px;
+}
+.user-motto{
+ color: red;
+ margin-left: 30%;
+}
+.userperson{
+  margin-top: 40rpx;
+}
+.userperson>view:first-child{
+  color: #14a1fd;
+}
+button{
+  margin-top: 70rpx; 
+  font-size: 30rpx;
+  width: 80%;
+  border-radius: 50rpx;
+  color: white;
+  background-color: #14a1fd;
+  box-shadow: 0 0 4rpx 1rpx rgba(20,161,253,0.7)
+}
+
+.select-only{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:30rpx;
+  font-size:26rpx;
+}
+.flexa1{
+  display:flex;
+  align-items:center;
+  flex:1;
+}
+.so-3{
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  border: 1px solid #7C7C7C;
+  margin-right: 20rpx;
+}
+.so-2{
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.select-only .active1{
+  border: 1px solid #14a1fd;
+}
+.select-only  .active2{
+  background-color: #14a1fd;
+}

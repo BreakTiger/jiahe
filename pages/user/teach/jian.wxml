@@ -1,0 +1,42 @@
+<view class='m0-all'>
+  <view class='ma-list'>
+    <block wx:key="allData" wx:for="{{allData}}">
+      <view class='ma-item mb20' data-items='{{item}}' bindtap='detailInto'>
+        <view>
+          <view class='flexba'>
+            <text class='f34'>{{item.duty}}</text>
+            <view class='acl'>
+              <text class='f22'>￥</text>
+              <text class='f30'>{{item.pay}}</text>
+            </view>
+          </view>
+        </view>
+        <view class='f26 acl9 mt20 flexa'>
+          <view>{{item.dizhi}}</view>
+          <view class='h-ling'></view>
+          <view>{{item.experience}}</view>
+          <view class='h-ling'></view>
+          <view>{{item.education}}</view>
+        </view>
+        <view class='mt20'>
+          <text class='f26'>岗位职位：</text>
+        </view>
+        <view class='mt20'>
+          <view class='f26 acl6'>
+            <text class='d000'>{{item.introduce}}</text>
+          </view>
+        </view>
+        <view class='mt20'>
+          <view class='mi-bottom'>
+            <view>
+              <image mode='widthFix' class='img-w' src='{{imgUrl}}{{item.principalurl}}'></image>
+            </view>
+            <view class='image-full flexa pl20'>
+              <text class='d000 acl3 f30'>{{item.principalname}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

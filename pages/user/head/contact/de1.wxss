@@ -1,0 +1,61 @@
+@import 'de0.wxss';
+
+.detail-content{
+   background-color: #f7f7f7; 
+}
+.mt-item{
+  width: 100%;
+  padding: 30rpx 24rpx 20rpx;
+  background-color: #fff;
+  height: 200rpx;
+  border-bottom: 1rpx solid #F8F9FB;
+}
+.mt-box{
+  padding-left: 140rpx;
+  position: relative;
+}
+.mt-lf{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 160rpx;
+  height: 100%;
+}
+.mt-lf>view{
+  width: 140rpx;
+  height: 140rpx;
+   border-radius: 50%; 
+  background-color: #333;
+
+}
+.mt-rt{
+  height: 100%;
+  position: relative;
+  padding-top: 5rpx;
+  margin-left: 20rpx;
+}
+.mt-rt-box{
+  position: relative;
+}
+.mt-t1{
+  margin-right: 30rpx;
+}
+.mt-t2{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 30rpx;
+}
+.mt-t2 image{
+  vertical-align: top;
+}
+.mt-t3a{
+  display: inline-block;
+  margin: 0 15rpx;
+  height: 26rpx;
+  border-left: 2rpx solid #999;
+}
+.huo{
+  position: absolute;
+  right: 0;
+  top: 0;
+}

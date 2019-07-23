@@ -1,0 +1,60 @@
+<view class='detail-content'>
+  <!-- 顶部介绍 -->
+  <view class='dc-header'>
+    <view class='ma-list'>
+      <view class='ma-item mb20'>
+        <view>
+          <view class='flexba'>
+            <text class='f34'>{{detail.duty}}</text>
+            <view class='acl'>
+              <text class='f30'>{{detail.pay}}</text>
+            </view>
+          </view>
+        </view>
+        <view class='f26 acl3 mt20 flexa'>
+          <view class='flexca mr50'>
+            <view class='img-lf mr15'>
+              <image mode='widthFix' class='img-w' src='../../../../imgs/index/teach1.png'></image>
+            </view>
+            <text>{{detail.dizhi}}</text>
+          </view>
+          <view class='flexca mr50'>
+            <view class='img-lf mr15'>
+              <image mode='widthFix' class='img-w' src='../../../../imgs/index/teach2.png'></image>
+            </view>
+            <text>{{detail.experience}}</text>
+          </view>
+          <view class='flexca mr50'>
+            <view class='img-lf mr15'>
+              <image mode='widthFix' class='img-w' src='../../../../imgs/index/teach3.png'></image>
+            </view>
+            <text>{{detail.education}}</text>
+          </view>
+        </view>
+        <view class='mt20'>
+          <view class='mi-bottom'>
+            <view>
+              <image mode='widthFix' class='img-w' src='{{imgUrl}}{{detail.principalurl}}'></image>
+            </view>
+            <view class='image-full flexa pl20 pr20'>
+              <text class='d000 acl3 f30'>{{detail.principalname}}</text>
+            </view>
+            <view></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 职位描述 -->
+  <view class='dc-content'>
+    <view class='dc-title flexa'>
+      <view class='mr20'>
+        <image class='image-full' src='../../../../imgs/index/dsc.png'></image>
+      </view>
+      <text class='f30'>职位描述</text>
+    </view>
+    <view class='dc-text acl6 f26'>
+      <text>{{detail.introduce}}</text>
+    </view>
+  </view>
+</view>

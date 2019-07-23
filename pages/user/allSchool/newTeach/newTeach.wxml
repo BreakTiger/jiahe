@@ -1,0 +1,67 @@
+<view class='newjob-container'>
+  <!-- 表单提交 -->
+   <form bindsubmit="formTeach">
+      <!-- 工作地点 -->
+       <view class='inputs-box flexba'>
+            <view class='input-text'>
+              <text>类型</text>
+            </view>
+            <view class='flexa inputext'>
+            <view class="section">
+              <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="picker">
+                  {{array[index]}}
+                </view>
+              </picker>
+            </view>
+            <image src="/images/5user/u_back@2x.png" class='acimg'></image>
+           <input style='display:none' maxlength="20" name="typenum"  value=" {{index}}" />
+          </view>
+     </view>
+
+
+       <!-- 建议填写岗位职责  -->
+       <view class='content-textrea'>
+            <view class='item-box'>
+              <textarea placeholder='学校介绍或加盟需求' name="remark" value=""></textarea>
+            </view>
+          </view>
+
+    <!-- 教室轮播图 -->
+    <view class='new-banner'>请在下面上传教室轮播图片 <text>*(最多4张)</text></view>
+         <view class='flex pic-box'>
+            <block wx:key="imgbox" wx:for="{{imgbox}}">
+              <view class='ap-box'>
+                <view class='add-pic'>
+                  <image class='image-full' src='{{item}}'></image>
+                  <view class='img-de' data-deindex='{{index}}' bindtap='imgDelete1'>
+                    <image src='/imgs/index/hmwk_del.png'></image>
+                  </view>
+                </view>
+              </view>
+            </block>
+            <view class='add-pic' bindtap='addPic1' wx:if="{{imgbox.length<4}}">
+              <image class='image-full' src='../../../../imgs/index/hmwk_picadd.png'></image>
+            </view>
+          </view>
+
+
+
+    <!-- <view  wx:if="{{user.sliderimage}}"> -----------
+        <view class='new-img' bindtap="classRoomImg" >
+            <image src="{{user.sliderimage}}"></image>
+        </view>
+    </view> 
+     <view wx:else="">
+        <view class='new-img' bindtap="classRoomImg" >
+            <image src="/images/5user/add_pic@2x.png"></image>
+        </view>
+    </view>  -->
+  <button class='bf-btn'formType="submit">
+      发布
+  </button> 
+   
+   </form>
+</view>
+
+

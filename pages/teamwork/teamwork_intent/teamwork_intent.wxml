@@ -1,0 +1,55 @@
+<view class='intent_container'>
+    <!-- 详情图片 -->
+    <view class='intent_img'>
+        <image src="{{schoolData.image}}"></image>
+    </view>
+
+    <!-- 相关信息 -->
+    <view class='intent_title'>
+        <view class='intent_title_box'></view>
+        <text class='intent_title_h'>相关信息</text>
+    </view>
+
+    <!-- 相关内容 -->
+    <view class='m0-bom'>
+        <view class='intent_content'>
+            <view class='content_left'>成立时间</view>
+            <view class='content_right'>{{schoolData.principal.establish}}</view>
+        </view>
+        <view class='intent_content_'>
+            <view class='content_left'>学生人数</view>
+            <view class='content_right'>{{schoolData.principal.studentnum}}</view>
+        </view>
+         <view class='intent_content_'>
+            <view class='content_left'>经营区域</view>
+            <view class='content_right'>{{schoolData.principal.address}}</view>
+        </view>
+         <view class='intent_content_'>
+            <view class='content_left'>场地面积</view>
+            <view class='content_right'>{{schoolData.principal.area}}</view>
+        </view>
+        <view class='intent_content_'>
+            <view class='content_left'>主要课程</view>
+            <view class='content_right'>{{schoolData.principal.session}}</view>
+        </view>
+        <view class='intent_content_mo'>
+            <view class='content_left'>学校介绍</view>
+            <view class='content_right_mo'>{{schoolData.principal.introduce}}</view>
+        </view>
+    </view>
+</view>
+
+  <!-- 发送合作意向按钮 -->
+
+<!-- <view class='add_btn'>
+  <button class='btn'>
+    整合申请
+  </button>
+</view> -->
+
+<!-- 发送简历按钮 -->
+<view class='add_btn' bindtap="add_shenqing">
+    <button class='btn'>
+          整合申请
+    </button>
+</view>

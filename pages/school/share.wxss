@@ -1,0 +1,279 @@
+page{
+  background-color: #f7f7f7;
+}
+
+/* 切换标题 */
+.nav{
+  width:100%;
+  height:100rpx;
+  display:flex;
+  flex-direction:row;
+  background: #fff;
+  border-bottom:4rpx solid #f7f7f7;
+}
+.default{
+  line-height:100rpx;
+  text-align:center;
+  flex:1;
+  font-size: 32rpx;
+  background: #fff;
+  color: #666666;
+  margin-left:38rpx;
+}
+.default_geo{
+  line-height:100rpx;
+  text-align:center;
+  flex:1;
+  font-size: 28rpx;
+  background: #fff;
+  color:#666666;
+}
+.default_geo image{
+  margin-top: 30rpx;
+  width:  35rpx;
+  height: 35rpx;
+}
+.red{
+  line-height:100rpx;
+  text-align:center;
+  color: #14a1fd;
+  flex:1;
+  font-size: 32rpx;
+  background: #fff;
+  margin-left:38rpx;
+}
+.nav_underline{
+  background:#14a1fd;
+  width:65rpx;
+  height:6rpx;
+  margin-top:-7rpx;
+  margin-left:69rpx;
+  border-radius:8rpx;
+  color: #666666;
+}
+.area-geo{
+  color:#666;
+  font-size: 28rpx;
+  text-align:center;
+  margin-top: 100rpx;
+}
+.show{
+  display:block;
+}
+.hidden{
+  display:none;
+}
+/*分享学校内容*/
+.school_share_img{
+  width: 100rpx;
+}
+.school_share_img image{
+  width: 108rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+.nav-geo{
+  align-items: center;
+  flex:1;
+  font-size:32rpx;
+  margin-left:53rpx;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+  width: 200rpx;
+  display:flex;
+  color: #14a1fd;  
+}
+.geo-left{
+  height: 37rpx;
+  border-left: 4rpx solid #14a1fd;
+}
+.section{
+  width:126rpx;
+  height:auto;
+  /* margin-left:10px; */
+  overflow:hidden;  
+  text-overflow:ellipsis;  
+  white-space:nowrap;
+}
+.nav-geo image{
+  width:30rpx;
+  height:30rpx;
+  padding: 0 20rpx;
+}
+.nav_text{
+  /* position: absolute;
+  right: 22rpx; */
+  /* margin-left: 16rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  max-width: 150rpx;
+  padding:0 15px; */
+  /* margin-left:10rpx; */
+  font-size: 28rpx;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+  width: 126rpx;
+  color:#666666;
+  text-align: center;
+  line-height: 40rpx;
+}
+.img-www{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 顶部区域筛选 */
+.share-city{
+  width: 100%;
+  height: 90rpx;
+  padding: 0 24rpx;
+  border-bottom: 1rpx solid #FAFBFC;
+  background-color: #fff;
+}
+.city-img{
+  width: 40rpx;
+  height: 32rpx;
+  margin-right: 20rpx;
+}
+/* 详情 */
+.list-item{
+  padding-top: 10rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+.item-top{
+  width: 100%;
+  height: 180rpx;
+  padding: 20rpx 24rpx;
+  border-bottom: 1rpx solid #FAFBFC;
+}
+.item-top .top-box{
+  width: 100%;
+  height: 100%;
+  padding-left: 120rpx;
+  position: relative; 
+}
+.item-top .top-img{
+  width: 120rpx; 
+  height: 120rpx; 
+  position: absolute;  
+  left: 0;  
+  top: 0;  
+  overflow: visible;
+}
+.item-top .top-img-a{
+  border-radius: 50%;
+}
+.item-top .top-img-b{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  bottom: -5rpx;
+  right: 15rpx;
+  border-radius: 50%;
+}
+
+.item-top .top-city{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.item-top .top-text{
+  padding-left: 20rpx;
+  width: 100%;
+  height: 100%;
+}
+.item-top .top-line1{
+  display: inline-block;
+  margin: 0 20rpx;
+  height: 30rpx;
+  border-left: 1px solid #333;
+}
+.item-top .top-line2{
+  display: inline-block;
+  margin: 0 20rpx;
+  height: 26rpx;
+  border-left: 1px solid #666;
+}
+
+.item-bottom .bottom-box{
+  width: 100%;
+  height: 90rpx;
+}
+.item-bottom .bottom-box>view{
+  width: 50%;
+  height: 100%;
+}
+.item-bottom .bb-img{
+  width: 40rpx;
+  height: 32rpx;
+  position: relative;
+}
+/* 话务 */
+.section-tel{
+position: absolute;
+left: 0;
+top: 0;
+opacity: 0;
+}
+/*立即沟通*/
+.linkup{
+  display:flex;
+  justify-content:center;
+  color:#14a1fd;
+  font-size:28rpx;
+  height: 60rpx;
+}
+.mar{
+  line-height:60rpx;
+}
+.linkup image{
+  width:27rpx;
+  height:27rpx;
+  margin-top:17rpx;
+  margin-left:20rpx;
+}

@@ -1,0 +1,25 @@
+<view class='container' >
+<!-- 轮播图片 -->
+<view class='banner_img'>
+    <image src="{{item.image}}"></image>
+</view>
+
+  <view wx:for="{{itemArray}}" wx:key="itemArray">
+  <!-- 轮播标题 -->
+    <view class='bannerDetail_title' >{{item.title}}</view>
+
+    <!-- 下划线 -->
+    <view class='bannerDetail_underline'></view>
+
+    <!-- 轮播详情内容  -->
+    <view class='bannerDetail_content' > 
+        <!-- <view class='bannerDetail_list'>{{itemArray.title}}</view>  -->
+        <view class='bannerDetail_list'>　　{{item.text}}</view>
+        <view class='bannerDetail_img'>
+            <image src="{{item.image}}"></image>
+        </view>
+    </view>
+</view>
+
+</view>
+

@@ -1,0 +1,89 @@
+ <view class='cooperation_container'>
+    <!-- 详情图片 -->
+    <view class='cooperation_img'>
+        <image src="{{schoolData.image}}"></image>
+    </view>
+
+    <!-- 标题 -->
+    <view class='cooperation_title'>
+        {{schoolData.itemname}}
+    </view>
+<!-- 
+    <view class='cooperation_title_name'>
+        <view class='title_name_img'>
+            <image src="{{schoolData.image}}" style="width: 60rpx; height: 60rpx;"></image>
+        </view>
+        <text class='title_name_txt'>{{schoolData.principalname}}</text>
+      
+    </view> -->
+
+    <!-- 下划线 -->
+    <view class='cooperation_underline'></view>
+
+  <!-- 详细信息 -->
+    <view class='intent_title'>
+        <view class='intent_title_box'></view>
+        <text class='intent_title_h'>详细信息</text>
+    </view>
+
+
+
+
+  <view class='detail_content'>
+      <view class='content_left'>学校名称</view>
+      <view class='content_right'>{{schoolData.principal.schoolname}}</view>
+  </view>
+    <view class='detail_content'>
+      <view class='content_left'>负责人</view>
+      <view class='content_right'>{{schoolData.principal.principalname}}</view>
+  </view>
+    <view class='detail_content'>
+        <view class='content_left'>成立时间</view>
+        <view class='content_right'>{{schoolData.principal.establish}}</view>
+    </view>
+    <view class='detail_content'>
+        <view class='content_left'>场地面积</view>
+        <view class='content_right'>{{schoolData.principal.area}}</view>
+    </view>
+      <view class='detail_content'>
+        <view class='content_left'>学校人数</view>
+        <view class='content_right'>{{schoolData.principal.studentnum}}</view>
+      </view>
+      <view class='detail_content'>
+          <view class='content_left'>主要课程</view>
+          <view class='content_right'>{{schoolData.principal.session}}</view>
+      </view>
+      <view class='detail_content'>
+          <view class='content_left'>学校介绍</view>
+          <view class='content_right'>{{schoolData.principal.introduce}}</view>
+      </view>
+      <view class='detail_content' >
+          <view class='content_left'>合作计划</view>
+          <view class='content_right'>{{schoolData.plan}}</view>
+      </view>
+
+    <!-- 下划线 -->
+    <!-- <view class='cooperation_underline'></view> -->
+
+
+    <view style="width: 100%;height: 100rpx;"></view>
+    <!-- 合作意向 -->
+    <view class='intent_title' wx:if="{{cooper != ''}}" data-id="{{cooper}}" bindtap="cooper"> 
+   <!-- <view class='intent_title'  bindtap="cooper"> -->
+        <view class='intent_title_box'></view>
+        <text class='intent_title_h'>合作意向者</text>
+  </view> 
+
+         <view class='m0-le'>
+          <view class='letter' wx:for="{{cooper}}" wx:key="unique" data-id="{{item}}" bindtap='cooper'>
+                <view class='letter_img'>
+                     <image src="{{item.user.principalimage}} "></image>
+                </view>
+                <view class='letter_txt'>
+                    {{item.user.principalname}}
+                </view>
+          </view>  
+        </view> 
+</view>
+
+

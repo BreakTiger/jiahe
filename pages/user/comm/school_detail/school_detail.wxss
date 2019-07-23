@@ -1,0 +1,45 @@
+.intent_img image{
+  width: 100%;
+  height: 500rpx;
+}
+/* 相关信息 */
+.intent_title{
+  /* border-left: 6rpx solid #14a1fd; */
+  margin-top: 12rpx;
+  display: flex;
+}
+.intent_title_box{
+  margin-top:34rpx;
+  margin-left:24rpx;
+  width:8rpx;
+  height:30rpx;
+  border-radius:10rpx;
+  background:#14a1fd;
+}
+.intent_title_h{
+  padding: 0 20rpx;
+  font-size: 34rpx;
+  margin-top: 25rpx;
+}
+.intent_content{
+  margin-top: 40rpx;
+  display: flex;
+}
+.content_left{
+  margin-left: 24rpx;
+  width: 200rpx;
+  color: #666666;
+  font-size: 28rpx;
+}
+.content_right{
+  width: 650rpx;
+  font-size: 28rpx;
+}
+.intent_content_{
+  margin-top: 30rpx;
+  display: flex
+}
+.hidden{
+  width: 100%;
+  height: 150rpx;
+}

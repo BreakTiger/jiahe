@@ -1,0 +1,9 @@
+<view class='paydetail-container'>
+  
+  <view class='paytext'>《平台协议》：</view>
+
+  <view class='paywidth'>
+    {{allData.content}}
+  </view>
+
+</view>

@@ -1,0 +1,83 @@
+<view class='detail-content'>
+  <!-- 1上半部分 -->
+  <view class='detail-top'>
+    <!-- 1.1头部 -->
+    <!-- 1.2轮播 -->
+    <view class='top-slider'>
+      <!-- 轮播 -->
+      <view class="banner-box">
+        <swiper class="home-banner swiper" indicator-dots="true" autoplay="true" indicator-color="rgba(255,255,255,0.4)" indicator-active-color="rgba(255,255,255,1)" circular='true' interval="3000" duration="1000">
+          <block wx:key="unique" wx:for="{{detail.carouse}}" wx:for-index="index">
+            <swiper-item>
+              <!-- <image class="banner-img" src="{{hpImg}}{{item.url}}" class="slide-image" mode="aspectFill" /> -->
+              <image class="banner-img" mode="aspectFill" src='{{imgUrl}}{{item}}'></image>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+  </view>
+  <!-- 下半部分 -->
+  <view class='co-img-title'>
+    <text></text>
+    <text>相关信息</text>
+  </view>
+  <view class='dc-mess'>
+    <view class='mess-content'>
+      <view class='content-hang f30 clear'>
+        <text class='acl6'>成立时间</text>
+        <view>
+          <text>{{detail.establish}}</text>
+        </view>
+      </view>
+      <view class='content-hang f30 clear '>
+        <text class='acl6'>学生人数</text>
+        <view>
+          <text>{{detail.studentnum}}</text>
+        </view>
+      </view>
+      <view class='content-hang f30 clear '>
+        <text class='acl6'>经营范围</text>
+        <view>
+          <text>{{detail.scope}}</text>
+        </view>
+      </view>
+      <view class='content-hang f30 clear '>
+        <text class='acl6'>经营区域</text>
+        <view>
+          <text>{{detail.address}}</text>
+        </view>
+      </view>
+      <view class='content-hang f30 clear '>
+        <text class='acl6'>场地面积</text>
+        <view>
+          <text>{{detail.area}}</text>
+        </view>
+      </view>
+      <view class='content-hang f30 clear '>
+        <text class='acl6'>主要课程</text>
+        <view>
+          <text>{{detail.project}}</text>
+        </view>
+      </view>
+      <view class='content-hang f30 clear '>
+        <text class='acl6'>学校介绍</text>
+        <view>
+          <text>{{detail.introduce}}</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+<view  class='bf000 flex f30'>
+  <view class='bf-r flexca' data-daphone='{{detail.phone}}' bindtap='daTel'>电话咨询</view>
+  
+</view>
+<!-- <view class='bf-r flexca'>客服在线</view> -->
+<!-- 话务 -->
+<view class='detail-tel flexca'>
+<image class='image-full' src='../../../imgs/index/de/icon.png'></image>
+<contact-button class='section-tel' size="27" session-from="weapp">
+</contact-button>
+</view>

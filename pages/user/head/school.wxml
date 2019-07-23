@@ -1,0 +1,54 @@
+<view class='school_container'>
+<!-- 没有充值的情况------------------------------------------------------ -->
+     <view class='pubish_img'  wx:if="{{publist.code == 503008}}">
+      <image src="/images/5user/p_default@2x.png" style="width:100%; height: 650rpx;"></image>
+        <view class='pu-tx'>暂无发布内容哦</view>
+  </view>   
+      <view class='pubish_img'  wx:if="{{publist.code == 402002}}" wx:if="{{publist.code == 402002}}">
+      <image src="/images/5user/p_default@2x.png" style="width:100%; height: 650rpx;"></image>
+        <view class='pu-tx'>暂无发布内容哦</view>
+  </view>   
+<!-- 充值情况 -------------------------------------------------- -->
+<view  wx:if="{{publist.code == 200}}">
+  <view wx:for="{{shareSchool}}" wx:key="uniqe" wx:if="{{item.status == 1}}">
+    <view class='publish_close' bindtap="close" data-id="{{item}}" wx:if="{{item.status == 1}}">关闭分享</view>
+          <view bindtap="goSchool_detail" data-id="{{item}}">
+              <view class='pubish_title'>
+                    <view class='pubish_title_t'>{{item.remark}}</view>
+                    <view class='pubish_title_release' wx:if="{{item.status == 1}}">[ 已发布 ]</view>
+                    <view class='pubish_title_true' wx:if="{{item.status == 2}}">[ 已关闭 ]</view> 
+              </view>
+              <view class='pubish_title_p'>
+                    <view class='pubish_title_one'>办学类型</view>
+                    <view class='pubish_title_b'></view>
+                    <view class='pubish_title_two' wx:if="{{item.typenum == 1}}">我要加盟</view>
+                    <view class='pubish_title_two' wx:if="{{item.typenum == 2}}">资质学校</view>
+              </view>
+          </view>
+    </view>
+</view>
+
+  
+</view>
+
+<view style="width:100%;height:200rpx;"></view>
+
+
+<!-- 底部按钮 -->
+<view class='bf000 flexca' wx:if="{{publist.code == 503008}}">
+  <view class='bf-btn flexca f30' bindtap='pubfaInto'>
+    <text>发送资质共享</text>
+  </view>
+</view>
+
+<view class='bf000 flexca'  wx:if="{{publist.code == 402002}}" >
+  <view class='bf-btn flexca f30' bindtap='pubfaInto'>
+    <text>发送资质共享</text>
+  </view>
+</view>
+
+<view class='bf000 flexca'  wx:if="{{publist.code == 200}}">
+  <view class='bf-btn flexca f30' bindtap='newTeach'>
+    <text>发送资质共享</text>
+  </view>
+</view>

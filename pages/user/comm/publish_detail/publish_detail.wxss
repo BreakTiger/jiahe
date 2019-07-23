@@ -1,0 +1,95 @@
+/* 代课老师 */
+.job_title{
+  display: flex;
+  margin-top: 40rpx;
+  margin-left: 24rpx;
+}
+.jon_title_name{
+  font-weight: bold;
+  font-size: 24rpx;
+}
+.job_title_txt{
+  margin-left:295rpx;
+  width:150rpx;
+  border:1px solid #ff4a4a;
+  border-radius:6px;
+  text-align:center;
+  font-size:27rpx;
+  color:#ff4a4a;
+  line-height:45rpx;
+  position:absolute;
+  right:25rpx;
+}
+
+/* 地区、时间、学历 */
+.job_three{
+  display: flex;
+  margin-top: 10rpx;
+}
+.job_three image{
+  margin-left: 22rpx;
+  width: 45rpx;
+  height: 35rpx;
+}
+.job_three_txt{
+  margin-left: 20rpx;
+  color: #666666;
+  font-size: 24rpx;
+}
+
+/* 下划线 */
+.job_underline{
+  width: 100%;
+  height: 20rpx;
+  background: #f7f7f7;
+  margin-top: 30rpx;
+}
+.job_described {
+  margin-top: 40rpx;
+  margin-left: 24rpx;
+}
+.job_described image{
+  margin-top: 10rpx;
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 8rpx;
+}
+.job_described_txt{
+  margin-left: 20rpx;
+  color: #333333;
+  font-size: 32rpx;
+}
+/* 岗位要求 */
+.duty{
+  margin-top: 30rpx;
+}
+.duty_content{
+  margin-left: 20rpx;
+}
+.duty_title{
+  margin-left: 20rpx;
+  font-size: 33rpx;
+}
+.duty_content_list{
+  width: 702rpx;
+  color: #666666;
+  font-size: 28rpx;
+}
+/*发送简历按钮*/
+.btn{
+  width: 100%;
+  margin: 0 auto;
+  height: 120rpx;
+  margin-left:150rpx;
+}
+button{
+  width: 360rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  background: #14a1fd;
+  color: #ffffff;
+  font-size: 32rpx;
+  box-shadow: 0rpx 3rpx 7rpx 0rpx rgba(20,161,253,0.35);
+  position: fixed;
+  bottom: 20rpx;
+}

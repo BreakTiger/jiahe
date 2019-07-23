@@ -1,0 +1,133 @@
+/* 1轮播部分 **********/
+.banner-box {
+  /* position: relative; */
+  background-color: #fff;
+  height: 500rpx;
+  /* border-bottom-left-radius: 20%; 
+   border-bottom-right-radius: 20%;  */
+  overflow: hidden;
+}
+
+.home-banner {
+  width: 100%;
+  height: 500rpx;
+}
+
+.home-banner image {
+  width: 100%;
+  height: 100%;
+}
+/* 详情图片*/
+.room_img image{
+  width: 100%;
+  height: 500rpx;
+}
+/*详情标题*/
+.goRoom_title{
+  margin-top: 40rpx;
+  display: flex;
+}
+.room_title{
+  margin-left: 24rpx;
+  font-size: 32rpx;
+  color: #333333;  
+  font-weight: bold;
+  width: 567rpx;
+}
+.room_title_right{
+  color: #ff4a4a;
+  font-size: 24rpx;
+  width: 150rpx;
+}
+.goRoom_time{
+  color: #ff4a4a;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  margin-left: 24rpx;
+}
+.goRoom_condition{
+  margin: 20rpx;
+  display: flex;
+  /* justify-content: center; */
+}
+.condition{
+  /* width:115rpx;
+  height:48rpx; */
+  text-align:center;
+  background-color:rgba(225,243,255,1);
+  color:#333333;
+  font-size:24rpx;
+  margin:0 15rpx 0 15rpx;
+  border-radius:8rpx;
+  line-height:23rpx;
+  padding:9rpx;
+}
+.goRoom_txt{
+  margin: 20rpx;
+  color: #333333;
+  font-size: 28rpx;
+}
+/*下划线*/
+.goRoom_underline{
+  width: 100%;
+  height: 20rpx;
+  background: #f7f7f7;
+  margin-top: 30rpx;
+}
+/* 教室详情 */
+/* .title_box{
+  margin-top: 20rpx;
+  margin-left: 24rpx;
+  padding: 0 20rpx;
+  color: #333333;
+  font-size: 32rpx;
+}
+.title_box_txt{
+  margin-left: 20rpx;
+  color:#333333;
+  font-size:32rpx;
+}
+.content_box{
+  width: 702rpx;
+  margin-top: 20rpx;
+  margin-left: 24rpx;
+  font-size: 32rpx;
+  color: #999999;
+}
+.box_img{
+  margin-top: 40rpx;
+  margin-left: 24rpx;
+  width: 702rpx;
+} */
+.title_box{
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+  color: #333333;
+  font-size: 32rpx;
+  border-bottom:4rpx solid #f7f7f7;
+  height:60rpx
+}
+.title_box_txt{
+  margin-left: 20rpx;
+  color:#333333;
+  font-size:32rpx;
+}
+.content_box{
+  width: 702rpx;
+  margin-top: 20rpx;
+  margin-left: 24rpx;
+  font-size: 32rpx;
+  color: #999999;
+}
+.box_img{
+  margin-top: 40rpx;
+  margin-left: 24rpx;
+  width: 702rpx;
+}
+.box_img image{
+  width: 100%;
+}
+.m0-while{
+  width: 100%;
+  height: 200rpx;
+}

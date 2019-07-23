@@ -1,0 +1,62 @@
+<view class='container'>
+
+  <!-- 代课老师 --> 
+  <view>
+      <view class='job_title'>
+          <text class='job_title_name'>{{jobData.jobname}}</text>
+          <view class='job_title_txt' bindtap="goCompiling"  data-id='{{jobData}}'>考编信息</view>
+      </view>
+
+  <!-- 地区、时间、学历 -->
+  <view>
+    <view class='job_three'>
+            <view class='job_three'>
+                <image src="/images/1teacher/h_icon7@2x.png"></image>
+                <text class='job_three_txt'>{{jobData.address}}</text>
+            </view>
+            <view class='job_three'>
+                <image src="/images/1teacher/h_icon2@2x.png"></image>
+                <text class='job_three_txt'>{{jobData.experience}}</text>
+            </view>
+            <view class='job_three'>
+                <image src="/images/1teacher/h_icon3@2x.png"></image>
+                <text class='job_three_txt'>{{jobData.education}}</text>
+            </view>
+        </view>
+        <view class='job_four' wx:if="{{jobData.user.principalimage && jobData.user.principalname != '' }}">
+                <image src="{{jobData.user.principalimage}}"></image>
+                <text class='job_four_txt'>{{jobData.user.principalname}}</text>
+                <view class='job_four_commun' bindtap='goCommunication'  data-id='{{jobData}}' >立即沟通</view> 
+        </view>
+    </view>
+      <!-- 下划线 -->
+      <view class='job_underline'></view>    
+
+        <view class='job_described'>
+           <view class='des-img'>
+               <image src="/images/1teacher/h_icon5@2x.png"></image>
+           </view>
+            <text class='job_described_txt'>职位描述</text>
+        </view>
+
+      <!-- 岗位职责 -->
+      <view class='duty'>
+          <text class='duty_title'>岗位职责：</text>
+          <view class='duty_content'> 
+               <view class='duty_content_list'>{{jobData.duty}}</view> 
+          </view>
+      </view>
+
+   </view> 
+</view>
+<!-- 发送简历按钮 -->
+<view class='add_btn' bindtap="add" wx:if="{{user.user_identity=='teacher'}}">
+<!-- //点击 发送简历 弹出框  -->
+  <!-- <toast hidden="{{status}}" duration="3000" bindchange="toastHide">
+        简历发送成功
+  </toast> -->
+    <button class='btn'>
+        发送简历
+    </button>
+</view>
+

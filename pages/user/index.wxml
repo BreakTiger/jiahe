@@ -1,0 +1,177 @@
+<!-- 教师 -->
+<!-- <view wx:if="{{user.user_identity!='teacher'}}"> -->
+<view wx:if="{{user.user_identity!='principal'}}">
+  <view class='user-top flexc'>
+    <view class='top-box flex'>
+      <view class='box-tou' bindtap='headImg'>
+        <image class='img-w' mode='widthFix' src="{{user.teacherimage}}" style='width: 140rpx;heigh：140rpx;'></image>
+      </view>
+      <view class='box-text flexa' bindtap='teacherInfo'>
+        <view>
+          <view class='flexa' style='height:80rpx;'>
+            <text class='f36'>{{user.teachername}}</text>
+            <view wx:if="{{user.sex=='男'}}" class='sex-img'>
+              <image class='image-full' src='../../../imgs/index/sex2.png'></image>
+            </view>
+             <view  wx:if="{{user.sex=='女'}}" class='sex-img'>
+              <image class='image-full' src='../../../imgs/index/sex1.png'></image>
+            </view>
+          </view>
+          <view>
+          </view>
+          <view  style='height:40rpx;' bindtap='personInto'>
+            <view class='f30'>*查看并修改代课简历 <image src="/images/5user/u_right@2x.png"  class='fimg'></image></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='delivery' bindtap='goDelivery_detail'>
+      <view class='delivery_name'>
+        <image src="/images/2classroom/title@2x.png" style="width: 8rpx; height: 30rpx;margin-top: 8rpx;"></image>
+        <text class='delivery_name_title'>我的简历投递</text>
+      </view>
+<!-- 过渡线 -->
+    <view class='delivery_line'></view>
+
+<!-- 教师没有投递的情况------------------ -->
+  <view class='no_delivery' wx:if="{{teacherJob==''}}">
+      <image src="/images/5user/t_default@2x.png" style="width: 100%; height: 500rpx;"></image>
+      <view class='no_text'>暂无投递记录哦~</view>
+  </view> 
+<!-- 教师投递情况----------------------- -->
+<view wx:if="{{!teacherJob==''}}" wx:for="{{teacherJob}}" wx:key="unique">
+  <view class='in-m0'>
+    <view class='box-txt' bindtap='changeToExamination' data-id="{{item}}">考编信息</view>
+    <view class='content' bindtap='teach_job' data-id='{{item}}'>
+      <view class='content-title'>
+           <text>{{item.teachername}}</text>
+      </view>
+      <view class='content-list'>
+            <text class='list-one'>{{item.address}}</text>
+            <text class='list-border'></text> 
+            <text class='list-two'>{{item.teacherage}}</text>
+            <text class='list-border'></text> 
+            <text class='list-two'>{{item.education}}</text>
+      </view>
+      <view class='content-item'>
+      <view class='item-img'>
+         <image src="{{item.user.principalimage}}"></image>
+      </view>
+         <text class='item-txt'>{{item.user.principalname}}</text>
+      </view>
+      <view class='item-interval'></view>
+    </view>
+  </view>
+</view>
+  </view>
+</view>
+<!-- 校长-------------------------------------------------------------------------------- -->
+ <view  wx:if="{{user.user_identity=='principal'}}"> 
+  <view class='user-top flexc'>
+    <view class='top-box flex'>
+      <view class='box-tou' bindtap='headImg'>
+        <image class='img' src='{{user.principalimage}}' style='width:100%;height:100%;'></image>
+      </view>
+      <view class='box-text flexa'>
+        <view>
+          <view class='flexa' style='height:80rpx;'>
+            <text class='f36' >{{user.principalname}}</text>
+          </view>
+          <view class='flexa' style='height:40rpx;' bindtap='masterInto'>
+            <view class='f26'>
+              查看并修改学校信息
+              <image class="img_o" src="/images/5user/u_right@2x.png" style="width:12rpx; height:20rpx;"></image>
+            </view>
+          </view>
+            <view class='flexa'>
+            <!-- 未开通会员 -->
+                <view class='ff-inex'  wx:if="{{endDate.code == 402002 }}">
+                    <view class="flextext"> 特权有效期:未开通会员</view>
+                </view>
+            <!-- 已过期 -->
+            <view class='ff-inex'  wx:if="{{endDate.code == 503008 }}">
+                    <view class="flextext"> 特权有效期:会员已到期</view>
+                </view>
+            <!-- 会员时间 -->
+                <view class='ff-inex'  wx:if="{{endDate.code == 200 }}">
+                        <view class="flextext"> 特权有效期:{{endDate.data}}</view>
+                </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='user-content clear'>
+    <view class="list">
+      <view class="item" bindtap="showInto">
+        <text>职位发布</text>
+        <view>
+          <image class='image-full' src='../../imgs/user/me_right_3.png'></image>
+        </view>
+      </view>
+      <view class="item" bindtap="roomInto">
+        <text>发布教室</text>
+        <view>
+          <image class='image-full' src='../../imgs/user/me_right_3.png'></image>
+        </view>
+      </view>
+      <view class="item" bindtap="schoolInto">
+        <text>资质共享</text>
+        <view>
+          <image class='image-full' src='../../imgs/user/me_right_3.png'></image>
+        </view>
+      </view>
+      <view class="item" bindtap="contactInto">
+        <text>校际合作</text>
+        <view>
+          <image class='image-full' src='../../imgs/user/me_right_3.png'></image>
+        </view>
+      </view>
+      <view class="item" bindtap="sendInto">
+        <text>我收到的简历</text>
+        <view>
+          <image class='image-full' src='../../imgs/user/me_right_3.png'></image>
+        </view>
+      </view>
+
+      <!-- <view class="item" bindtap="sendInto">
+        <text>我收到的简历</text>
+        <view>
+          <image class='image-full' src='../../imgs/user/me_right_3.png'></image>
+        </view>
+      </view> -->
+    </view>
+  </view>
+</view>
+<!-- 普通用户-------------------------------------------------------------------------------- -->
+<view w wx:if="{{user.idcard==3}}">
+  <view class='user-top flexc'>
+    <view class='top-box flex'>
+      <view class='box-tou'  bindtap='headImg'>
+        <image class='img-w' mode='widthFix' src='{{imgUrl}}{{user.url}}'></image>
+      </view>
+      <view class='box-text flexa'>
+        <view>
+          <view class='flexa' style='height:80rpx;'>
+            <text class='f36'  wx:if="{{user.name}}">{{user.name}}</text>
+          </view>
+          <view class='flexa' style='height:40rpx;' bindtap="puInto">
+            <!-- <text class='f24'>查看并修改个人信息>></text> -->
+            <text class='f24'>查看并修改代课简历>></text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='user-content clear'>
+    <view class="list">
+      <view class="item" bindtap="puInto">
+        <text>我的校际合作</text>
+        <view>
+          <image class='image-full' src='../../imgs/user/me_right_3.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

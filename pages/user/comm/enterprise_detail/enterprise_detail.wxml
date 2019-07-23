@@ -1,0 +1,95 @@
+<view class='cooperation_container'>
+    <!-- 详情图片 -->
+    <view class='cooperation_img'>
+        <image src="/images/1teacher/h_slide_pic@2x.png"></image>
+    </view>
+
+    <!-- 标题 -->
+    <view class='cooperation_title'>
+        校企科研合作项目一
+    </view>
+    
+
+    <!-- 下划线 -->
+    <view class='cooperation_underline'></view>
+
+  <!-- 详细信息 -->
+  <view class='cooperation_detail'>
+      <view class='detail_name'>详细信息</view>
+  </view>
+  <view class='detail_content'>
+      <view class='content_left'>学校名称</view>
+      <view class='content_right'>步步高少年培训中心</view>
+  </view>
+    <view class='detail_content'>
+      <view class='content_left'>负责人</view>
+      <view class='content_right'>小小双</view>
+  </view>
+    <view class='detail_content'>
+        <view class='content_left'>建校时间</view>
+        <view class='content_right'>2017-12-12</view>
+    </view>
+    <view class='detail_content'>
+        <view class='content_left'>场地面积</view>
+        <view class='content_right'>300M2</view>
+    </view>
+      <view class='detail_content'>
+        <view class='content_left'>学校人数</view>
+        <view class='content_right'>10000万人</view>
+      </view>
+      <view class='detail_content'>
+          <view class='content_left'>主要课程</view>
+          <view class='content_right'>书画、舞蹈、演员</view>
+      </view>
+      <view class='detail_content'>
+          <view class='content_left'>学校介绍</view>
+          <view class='content_right'>步步高青少年培训中心，是由上海交通大学海外教育学院批准成立的，从事高层次、专业型、实战型、国际化学历后教育的直属单位，为组织和个人发展提供综合教育</view>
+      </view>
+      <view class='detail_content'>
+          <view class='content_left'>合作计划</view>
+          <view class='content_right'>甲方在乙方突出跆拳道项目，在各类推广活动中加入跆拳道项目宣传，对报名跆拳道项目的客户进行灵活就近安排，甲方享受客户所上课时分润（5-10%）“价格问题说明”。乙方机构在其场馆及宣传页面为甲方提供宣传场地及窗口，在各类推广活动中加入乙方课程宣传，乙方在其平台获得有需求的学员，必须提供给甲方，由甲方提供及维护后期陪读服务，乙方享受客户上课时分润（5-10%）</view>
+      </view>
+
+    <!-- 下划线 -->
+    <view class='cooperation_underline'></view>
+
+    <!-- 合作意向 -->
+  <view class='cooperation_detail'>
+        <view class='detail_name'>合作意向者</view>
+  </view>
+
+  <view class='letter'>
+    <view class='letter_img'>
+        <image src="/images/1teacher/h_slide_pic@2x.png "></image>
+    </view>
+    <view class='letter_txt'>
+      嘉禾英语教育中心
+    </view>
+  </view>
+    <view class='letter'>
+    <view class='letter_img'>
+        <image src="/images/1teacher/h_slide_pic@2x.png "></image>
+    </view>
+    <view class='letter_txt'>
+      嘉禾英语教育中心
+    </view>
+  </view>
+    <view class='letter'>
+    <view class='letter_img'>
+        <image src="/images/1teacher/h_slide_pic@2x.png "></image>
+    </view>
+    <view class='letter_txt'>
+      嘉禾英语教育中心
+    </view>
+  </view>
+    <view class='letter'>
+    <view class='letter_img'>
+        <image src="/images/1teacher/h_slide_pic@2x.png "></image>
+    </view>
+    <view class='letter_txt'>
+      嘉禾英语教育中心
+    </view>
+  </view>
+
+
+</view>
